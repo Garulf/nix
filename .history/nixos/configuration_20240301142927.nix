@@ -17,6 +17,12 @@ in
       ./sys-pkgs.nix
       ./users/garulf.nix
     ];
+  
+  programs.git = {
+    enable = true;
+    userName  = "Garulf";
+    userEmail = "35299+Garulf@users.noreply.github.com";
+  };
 
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
@@ -127,12 +133,6 @@ in
   programs.neovim = {
     enable = true;
     defaultEditor = true;
-  };
-
-  programs.git = {
-    enable = true;
-    userName  = "Garulf";
-    userEmail = "35299+Garulf@users.noreply.github.com";
   };
 
 

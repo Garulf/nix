@@ -17,8 +17,7 @@ in
       ./sys-pkgs.nix
       ./users/garulf.nix
     ];
-
-
+  
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
   # Bootloader.
@@ -127,12 +126,6 @@ in
   programs.neovim = {
     enable = true;
     defaultEditor = true;
-  };
-
-  programs.git = {
-    enable = true;
-    userName  = "Garulf";
-    userEmail = "35299+Garulf@users.noreply.github.com";
   };
 
 

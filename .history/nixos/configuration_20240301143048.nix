@@ -129,12 +129,6 @@ in
     defaultEditor = true;
   };
 
-  programs.git = {
-    enable = true;
-    userName  = "Garulf";
-    userEmail = "35299+Garulf@users.noreply.github.com";
-  };
-
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
