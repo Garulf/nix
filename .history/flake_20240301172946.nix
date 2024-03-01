@@ -24,7 +24,7 @@
       albus = nixpkgs.lib.nixosSystem {
         specialArgs = {inherit inputs outputs;};
         # > Our main nixos configuration file <
-        modules = [./hosts/albus/configuration.nix];
+        modules = [./hosts/nixos/configuration.nix];
       };
     };
 
@@ -32,7 +32,7 @@
     # Available through 'home-manager --flake .#your-username@your-hostname'
     homeConfigurations = {
       # FIXME replace with your username@hostname
-      "garulf@albus" = home-manager.lib.homeManagerConfiguration {
+      "garulf@nixos" = home-manager.lib.homeManagerConfiguration {
         pkgs = nixpkgs.legacyPackages.x86_64-linux; # Home-manager requires 'pkgs' instance
         extraSpecialArgs = {inherit inputs outputs;};
         # > Our main home-manager configuration file <
