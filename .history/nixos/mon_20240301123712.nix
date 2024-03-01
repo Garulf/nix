@@ -1,7 +1,7 @@
 {  config, pkgs, ... }: 
 
 let
-  monitorsXmlContent = builtins.readFile ./monitors.xml;
+  monitorsXmlContent = builtins.readFile /home/garulf/.config/monitors.xml;
   monitorsConfig = pkgs.writeText "gdm_monitors.xml" monitorsXmlContent;
 in
   systemd.tmpfiles.rules = [
