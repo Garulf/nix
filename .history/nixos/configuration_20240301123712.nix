@@ -16,6 +16,7 @@ in
       ./nvidia.nix
       ./sys-pkgs.nix
       ./users/garulf.nix
+      ./gnome.nix
     ];
   
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
