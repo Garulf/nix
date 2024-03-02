@@ -25,8 +25,8 @@
 
   fileSystems."/run/media/garulf/Games M.2" =
     { device = "/dev/disk/by-uuid/BC96451A9644D694";
-      fsType = "fuseblk";
-      options = ["rw" "nosuid" "nodev" "relatime" "nofail" "user_id=0" "group_id=0" "default_permissions" "allow_other" "blksize=4096" "iocharset=utf8" "uhelper=udisks2"];
+      fsType = "ntfs-3g";
+      options = ["rw" "nosuid" "nodev" "relatime" "nofail" "uid=1000" "gid=100" "iocharset=utf8" "uhelper=udisks2"];
     };
 
   swapDevices = [ ];
