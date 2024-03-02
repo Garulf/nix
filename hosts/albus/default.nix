@@ -62,10 +62,6 @@ in
 
   environment.sessionVariables.NIXOS_OZONE_WL = "1";
 
-  # Enable the GNOME Desktop Environment.
-  services.xserver.displayManager.gdm.enable = false;
-  services.xserver.desktopManager.gnome.enable = false;
-
   # Configure keymap in X11
   services.xserver = {
     layout = "us";
@@ -149,11 +145,6 @@ in
     dedicatedServer.openFirewall =true;
   };
 
-  programs.hyprland = {
-    enable = true;
-    nvidiaPatches = true;
-    xwayland.enable = true;
-  };
 
   hardware.opengl = {
     enable = true;

@@ -2,7 +2,7 @@
 
 {
   imports = [
-    ../pkgs/browsers/brave.nix
+    ../wm/gnome.nix
   ];
 
   users.users.garulf = {
@@ -16,5 +16,4 @@
     ];
   };
 
-  home-manager.users.misterio = import ../home/garulf/${config.networking.hostName}.nix;
 }
