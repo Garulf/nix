@@ -57,21 +57,21 @@
     userEmail = "535299+Garulf@users.noreply.github.com";
   };
 
-  programs.zsh = {
+programs.zsh = {
+  enable = true;
+  enableCompletion = true;
+  enableAutosuggestions = true;
+  syntaxHighlighting.enable = true;
+
+  history.size = 10000;
+  history.path = "${config.xdg.dataHome}/zsh/history";
+
+  oh-my-zsh = {
     enable = true;
-    enableCompletion = true;
-    enableAutosuggestions = true;
-    syntaxHighlighting.enable = true;
-
-    history.size = 10000;
-    history.path = "${config.xdg.dataHome}/zsh/history";
-
-    oh-my-zsh = {
-      enable = true;
-      plugins = [ "git" ];
-      theme = "robbyrussell";
-    };
+    plugins = [ "git" ];
+    theme = "robbyrussell";
   };
+};
 
   # Nicely reload system units when changing configs
   systemd.user.startServices = "sd-switch";
