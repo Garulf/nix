@@ -25,7 +25,7 @@
 
   fileSystems."/run/media/garulf/Games M.2" =
     { device = "/dev/disk/by-uuid/BC96451A9644D694";
-      fsType = "lowntfs-3g";
+      fsType = "ntfs-3g";
       options = ["rw" "nosuid" "exec" "user" "nodev" "relatime" "nofail" "uid=1000" "gid=100" "iocharset=utf8" "uhelper=udisks2"];
     };
 
