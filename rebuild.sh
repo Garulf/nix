@@ -32,5 +32,5 @@ git commit -am "$current"
 # notify-send -e "NixOS Rebuilt OK!" --icon=software-update-available
 
 # clean up older generations
-sudo nix-collect-garbage -d 5d
+sudo nix-collect-garbage --delete-generations 14d
 sudo nix-store --gc
