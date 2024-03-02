@@ -16,5 +16,5 @@
     ];
   };
 
-  home
+  home-manager.users.misterio = import ../home/garulf/${config.networking.hostName}.nix;
 }
