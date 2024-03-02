@@ -4,7 +4,7 @@ set -e
 
 
 # check for changes to config
-git ls-files -m | grep -qP '^.*\.nix$' || (echo "No changes to config detected!"; false)
+# git ls-files -m | grep -qP '^.*\.nix$' || (echo "No changes to config detected!"; false)
 
 # Autoformat your nix files
 # alejandra . &>/dev/null
