@@ -1,6 +1,10 @@
 { config, pkgs, ... }: 
 
 {
+  imports = [
+    ../pkgs/browsers/brave.nix
+  ];
+
   users.users.garulf = {
     isNormalUser = true;
     description = "garulf";
@@ -11,4 +15,6 @@
       discord
     ];
   };
+
+  home
 }
