@@ -133,11 +133,6 @@ in
     defaultEditor = true;
   };
 
-  programs.zsh = {
-    enable = true;
-    enableCompletion = true;
-    enableGlobalCompletion = true;
-  };
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
