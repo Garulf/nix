@@ -2,17 +2,15 @@
 # A rebuild script that commits on a successful build
 set -e
 
-# cd to your config dir
-# pushd ~/dotfiles/nixos/
 
-# Edit your config
-# $EDITOR configuration.nix
+# check for changes to config
+git ls-files -m | grep -qP '^.*\.nix$' || (echo "No changes to config detected!"; false)
 
 # Autoformat your nix files
 # alejandra . &>/dev/null
 
 # Shows your changes
-git diff -U0 *.nix
+# git diff *.nix
 
 echo "NixOS Rebuilding..."
 
@@ -25,11 +23,6 @@ current=$(nixos-rebuild list-generations | grep current)
 # Commit all changes witih the generation metadata
 git commit -am "$current"
 
-# Back to where you were
-# popd
-
-# Notify all OK!
-# notify-send -e "NixOS Rebuilt OK!" --icon=software-update-available
 
 # clean up older generations
 sudo nix-collect-garbage --delete-generations 14d
