@@ -25,5 +25,5 @@ git commit -am "$current"
 
 
 # clean up older generations
-sudo nix-collect-garbage --delete-older-than 14d
-sudo nix-store --gc
+# sudo nix-collect-garbage --delete-older-than 14d
+# sudo nix-store --gc
