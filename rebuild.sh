@@ -30,3 +30,7 @@ git commit -am "$current"
 
 # Notify all OK!
 # notify-send -e "NixOS Rebuilt OK!" --icon=software-update-available
+
+# clean up older generations
+sudo nix-collect-garbage -d 5d
+sudo nix-store --gc
