@@ -11,4 +11,7 @@
       discord
     ];
   };
+
+  programs.zsh.enable = true;
+  users.users.yourname.shell = pkgs.zsh;
 }
