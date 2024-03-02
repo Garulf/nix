@@ -9,7 +9,7 @@
 
   import = [
     ./cli/zsh.nix
-  ]
+  ];
 
   home = {
     username = "garulf";
