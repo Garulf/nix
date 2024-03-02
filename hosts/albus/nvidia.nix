@@ -11,6 +11,11 @@
   # Load nvidia driver for Xorg and Wayland
   services.xserver.videoDrivers = ["nvidia"]; # or "nvidiaLegacy470 etc.
 
+  # Fix issues with some applications not working with Nvidia
+  # https://github.com/NixOS/nixpkgs/issues/32580
+  environment.variables.WEBKIT_DISABLE_COMPOSITING_MODE = 1;
+
+
   hardware.nvidia = {
 
     # Modesetting is required.
