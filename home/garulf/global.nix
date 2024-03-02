@@ -7,7 +7,7 @@
   ...
 }: {
 
-  import = [
+  imports = [
     ./cli/zsh.nix
   ];
 
