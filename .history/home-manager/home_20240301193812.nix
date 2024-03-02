@@ -65,12 +65,6 @@ programs.zsh = {
 
   history.size = 10000;
   history.path = "${config.xdg.dataHome}/zsh/history";
-
-  oh-my-zsh = {
-    enable = true;
-    plugins = [ "git" ];
-    theme = "robbyrussell";
-  };
 };
 
   # Nicely reload system units when changing configs

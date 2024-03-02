@@ -63,14 +63,12 @@ programs.zsh = {
   enableAutosuggestions = true;
   syntaxHighlighting.enable = true;
 
+  shellAliases = {
+    ll = "ls -l";
+    update = "sudo nixos-rebuild switch";
+  };
   history.size = 10000;
   history.path = "${config.xdg.dataHome}/zsh/history";
-
-  oh-my-zsh = {
-    enable = true;
-    plugins = [ "git" ];
-    theme = "robbyrussell";
-  };
 };
 
   # Nicely reload system units when changing configs

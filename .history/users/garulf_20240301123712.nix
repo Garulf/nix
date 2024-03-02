@@ -8,9 +8,9 @@
     packages = with pkgs; [
       firefox
       discord
+      python310
+      python311
+      python312
     ];
   };
-
-  programs.zsh.enable = true;
-  users.users.yourname.shell = pkgs.zsh;
 }
