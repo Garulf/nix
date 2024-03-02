@@ -50,12 +50,12 @@
 
   # Enable home-manager and git
   programs.home-manager.enable = true;
+  programs.git.enable = true;
 
   programs.git = {
     enable = true;
     user.name = "Garulf";
-    user.email = "535299+Garulf@users.noreply.github.com";
-  };
+    user.email = "535299+Garulf@users.noreply.github.com"
 
   programs.oh-my-zsh = {
     enable = true;
