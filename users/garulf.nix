@@ -13,6 +13,7 @@
     packages = with pkgs; [
       firefox
       discord
+      cider
     ];
   };
 
