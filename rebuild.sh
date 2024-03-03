@@ -22,7 +22,7 @@ current=$(nixos-rebuild list-generations | grep current)
 generation=$(echo $current | cut -d ' ' -f 1)
 # Commit all changes witih the generation metadata
 git commit -am "$current"
-git tag -a "$generation" -m "$current"
+git tag | grep -qP "^$generation$" && git tag -a "$generation" -m "$current"
 
 
 # clean up older generations
