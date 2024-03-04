@@ -16,6 +16,7 @@
       cider
       ulauncher
       google-chrome
+      gamemode
     ];
   };
 
