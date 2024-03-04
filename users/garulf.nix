@@ -15,6 +15,7 @@
       discord
       cider
       ulauncher
+      google-chrome
     ];
   };
 
