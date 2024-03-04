@@ -25,10 +25,10 @@
         };
       }];
     };
-  environment.systemPackages = [
-    pkgs.gnomeExtensions.forge
-    pkgs.gnomeExtensions.blur-my-shell
-    pkgs.gnomeExtensions.just-perfection
-    pkgs.gnomeExtensions.appindicator
+  environment.systemPackages = with pkgs; [
+    gnomeExtensions.forge
+    gnomeExtensions.blur-my-shell
+    gnomeExtensions.just-perfection
+    gnomeExtensions.appindicator
   ];
 }
