@@ -104,9 +104,8 @@ in
   environment.systemPackages = with pkgs; [
      vim
      steam
-     bitwarden
      vscode
-     ulauncher
+     openrgb
      (vscode-with-extensions.override {
        vscodeExtensions = with vscode-extensions; [
          bbenoist.nix

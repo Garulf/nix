@@ -14,6 +14,7 @@
       firefox
       discord
       cider
+      bitwarden
       ulauncher
       google-chrome
       gamemode
