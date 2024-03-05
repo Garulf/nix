@@ -13,7 +13,7 @@ in
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
       ./nvidia.nix
-      ./sys-pkgs.nix
+      ./pkgs.nix
       ../../users/garulf.nix
       ./openrgb.nix
     ];
