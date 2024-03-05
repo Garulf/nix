@@ -30,5 +30,6 @@
     gnomeExtensions.blur-my-shell
     gnomeExtensions.just-perfection
     gnomeExtensions.appindicator
+    gnome.gnome-remote-desktop
   ];
 }
