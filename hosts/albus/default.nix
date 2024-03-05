@@ -6,7 +6,7 @@
 
 let
   openrgb-rules = builtins.fetchurl {
-    url = "https://gitlab.com/CalcProgrammer1/OpenRGB/-/raw/master/60-openrgb.rules";
+    url = "https://openrgb.org/releases/release_0.9/60-openrgb.rules";
   };
   monitorsXmlContent = builtins.readFile /home/garulf/.config/monitors.xml;
   monitorsConfig = pkgs.writeText "gdm_monitors.xml" monitorsXmlContent;
@@ -28,7 +28,7 @@ in
 
   boot.kernelModules = [ "i2c-dev" "i2c-piix4" ];
 
-  services.udev.extraRules =  builtins.readFile openrgb-rules;
+  services.udev.extraRules = builtins.readFile openrgb-rules;
 
   networking.hostName = "albus"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
