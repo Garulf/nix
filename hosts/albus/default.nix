@@ -62,6 +62,7 @@ in
   services.xserver.enable = true;
 
   services.xrdp.enable = true;
+  services.xrdp.defaultWindowManager = "gnome-remote-desktop";
   services.xrdp.openFirewall = true;
 
   environment.sessionVariables.NIXOS_OZONE_WL = "1";
