@@ -60,7 +60,7 @@ in
 
   services.openssh = {
     enable = true;
-    settings.passwordAuthentication = true;
+    settings.PasswordAuthentication = true;
   };
 
 
