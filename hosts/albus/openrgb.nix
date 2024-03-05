@@ -3,6 +3,12 @@
   boot.kernelModules = [ "i2c-dev" "i2c-piix4" ];
   services.udev.extraRules = ''
     #---------------------------------------------------------------#
+    # Asus AURA Core - DetectAsusAuraCoreControllers
+    #---------------------------------------------------------------#
+    SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="0b05", ATTRS{idProduct}=="1854", TAG+="uaccess", TAG+="ASUS_Aura_Core"
+    SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="0b05", ATTRS{idProduct}=="1866", TAG+="uaccess", TAG+="ASUS_Aura_Core"
+    SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="0b05", ATTRS{idProduct}=="1869", TAG+="uaccess", TAG+="ASUS_Aura_Core"
+    #---------------------------------------------------------------#
     # Corsair Commander Core - DetectCorsairCapellixHIDControllers
     #---------------------------------------------------------------#
     SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="1b1c", ATTRS{idProduct}=="0c1c", TAG+="uaccess", TAG+="Corsair_Commander_Core"
