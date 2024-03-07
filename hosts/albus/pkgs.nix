@@ -1,6 +1,10 @@
 { config, pkgs, ... }:
 
 {
+  imports =
+    [
+      ../../pkgs/steam.nix
+    ];
   environment.systemPackages = with pkgs; [
      vim
      steam
