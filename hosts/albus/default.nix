@@ -131,6 +131,7 @@ in
       Service.ExecStart = "${cfg.package}/bin/sunshine";
       Install.WantedBy = [ "graphical-session.target" ];
     };
+  };
 
 
   # This value determines the NixOS release from which the default
