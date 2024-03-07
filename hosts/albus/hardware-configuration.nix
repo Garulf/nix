@@ -14,7 +14,7 @@
   boot.extraModulePackages = [ ];
 
   boot.initrd.preLVMCommands = ''
-    mdadm --run /dev/md0
+    mdadm --assemble /dev/md0
   '';
 
   systemd.services.raid-monitor = {
