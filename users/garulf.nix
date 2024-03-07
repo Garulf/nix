@@ -20,6 +20,7 @@
       gamemode
       vscode
       prismlauncher
+      screen
     ];
   };
 
