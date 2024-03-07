@@ -13,6 +13,15 @@
   boot.kernelModules = [ "kvm-amd" ];
   boot.extraModulePackages = [ ];
 
+  environment.systemPackages = with pkgs; [
+    mdadm
+  ]
+
+  environment.etc."mdadm.conf".text = ''
+    ARRAY /dev/md0 level=raid5 num-devices=4 metadata=1.2 name=albus:0 UUID=7673361d:6833b71b:2069f66f:ed297107
+      devices=/dev/sda1,/dev/sdb1,/dev/sdc1,/dev/sdd1
+  '';
+
   fileSystems."/" =
     { device = "/dev/disk/by-uuid/06295bb5-da42-4852-9a8f-eb9f2656e4d8";
       fsType = "ext4";
