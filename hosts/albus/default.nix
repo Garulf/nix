@@ -125,11 +125,15 @@ in
   };
 
 
-  systemd.user.services = {
-    sunshine = {
-      Unit.Description = "Sunshine is a Game stream host for Moonlight.";
-      Service.ExecStart = "${pkgs.sunshine}/bin/sunshine";
-      Install.WantedBy = [ "graphical-session.target" ];
+  systemd.services.sunshine = {
+    description = "Sunshine is a Game stream host for Moonlight.";
+    WantedBy = [ "graphical-session.target" ];
+    serviceConfig = {
+      User = "garulf";
+      Group = "users";
+      Restart = "always";
+      RestartSec = "5";
+      ExecStart = "${pkgs.sunshine}/bin/sunshine";
     };
   };
 
