@@ -15,6 +15,8 @@
 
   boot.initrd.preLVMCommands = ''
     mdadm --run /dev/md127
+    ARRAY /dev/md0 level=raid5 num-devices=4 metadata=1.2 name=albus:0 UUID=7673361d:6833b71b:2069f66f:ed297107
+      devices=/dev/sda1,/dev/sdb1,/dev/sdc1,/dev/sdd1
   '';
 
   systemd.services.raid-monitor = {
