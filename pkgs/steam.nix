@@ -10,4 +10,9 @@
       ExecStart = "${pkgs.steam}/bin/steam -nochatui -nofriendsui -silent";
     };
   };
+
+  programs.steam = {
+    remotePlay.openFirewall = true;
+    dedicatedServer.openFirewall =true;
+  };
 }
