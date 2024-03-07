@@ -4,6 +4,7 @@
   imports =
     [
       ../../pkgs/steam.nix
+      ../../pkgs/openrgb.nix
     ];
   environment.systemPackages = with pkgs; [
      vim

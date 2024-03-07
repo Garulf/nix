@@ -15,7 +15,6 @@ in
       ./nvidia.nix
       ./pkgs.nix
       ../../users/garulf.nix
-      ./openrgb.nix
       ./firewall.nix
     ];
 
