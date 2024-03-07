@@ -5,7 +5,7 @@
     description = "Launches Steam on login.";
     wantedBy = [ "graphical-session.target" ];
     serviceConfig = {
-      Restart = "always";
+      Restart = "on-failure";
       RestartSec = "5";
       ExecStart = "${pkgs.steam}/bin/steam -nochatui -nofriendsui -silent";
     };
