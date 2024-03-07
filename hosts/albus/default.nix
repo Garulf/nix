@@ -130,10 +130,9 @@ in
     wantedBy = [ "graphical-session.target" ];
     serviceConfig = {
       User = "garulf";
-      Group = "users";
       Restart = "always";
       RestartSec = "5";
-      ExecStart = "${pkgs.sunshine}/bin/sunshine";
+      ExecStart = ''${pkgs.sunshine}/bin/sunshine'';
     };
   };
 
