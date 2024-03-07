@@ -32,7 +32,7 @@
   fileSystems."/run/media/Storage" =
     { device = "/dev/md0";
       fsType = "ext4";
-      options = ["rw" "nofail"];
+      options = ["nosuid" "nodev" "nofail" "x-gvfs-show" "rw" "exec"];
     };
 
   swapDevices = [ ];
