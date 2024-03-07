@@ -21,6 +21,10 @@
     serviceConfig.ExecStart = "${pkgs.mdadm}/bin/mdadm --monitor --scan";
   };
 
+  environment.etc."mdadm.conf".text = ''
+    MAILADDR root
+  '';
+
 
   fileSystems."/" =
     { device = "/dev/disk/by-uuid/06295bb5-da42-4852-9a8f-eb9f2656e4d8";
