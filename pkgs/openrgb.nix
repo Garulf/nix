@@ -4,7 +4,7 @@
 
   boot.kernelModules = [ "i2c-dev" "i2c-piix4" ];
 
-  systemd.user.services.steam = {
+  systemd.user.services.openrgb = {
     description = "Launches Openrgb on login.";
     wantedBy = [ "graphical-session.target" ];
     serviceConfig = {
