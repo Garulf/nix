@@ -1,7 +1,7 @@
 { config, lib, pkgs, ... }:
 {
   boot.initrd.preLVMCommands = ''
-    mdadm --run /dev/md0
+    mdadm --run /dev/md127
   '';
 
   systemd.services.raid-monitor = {
