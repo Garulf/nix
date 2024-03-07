@@ -17,9 +17,7 @@
       bitwarden
       ulauncher
       google-chrome
-      gamemode
       vscode
-      prismlauncher
       screen
     ];
   };

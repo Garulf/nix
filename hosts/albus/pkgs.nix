@@ -7,6 +7,8 @@
      openrgb
      openrgb-plugin-effects
      gzdoom
+     prismlauncher
+     gamemode
      sunshine
      (vscode-with-extensions.override {
        vscodeExtensions = with vscode-extensions; [
