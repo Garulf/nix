@@ -4,9 +4,9 @@
   environment.systemPackages = with pkgs; [
      vim
      steam
-     vscode
      openrgb
      openrgb-plugin-effects
+     gzdoom
      (vscode-with-extensions.override {
        vscodeExtensions = with vscode-extensions; [
          bbenoist.nix
