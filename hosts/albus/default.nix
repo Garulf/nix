@@ -124,11 +124,11 @@ in
     driSupport32Bit = true;
   };
 
-  cfg = config.services.sunshine;
+
   systemd.user.services = {
     sunshine = {
       Unit.Description = "Sunshine is a Game stream host for Moonlight.";
-      Service.ExecStart = "${cfg.package}/bin/sunshine";
+      Service.ExecStart = "${pkgs.sunshine}/bin/sunshine";
       Install.WantedBy = [ "graphical-session.target" ];
     };
   };
