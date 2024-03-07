@@ -129,10 +129,9 @@ in
     description = "Sunshine is a Game stream host for Moonlight.";
     wantedBy = [ "graphical-session.target" ];
     serviceConfig = {
-      User = "garulf";
       Restart = "always";
       RestartSec = "5";
-      ExecStart = ''${pkgs.sunshine}/bin/sunshine'';
+      ExecStart = "${pkgs.screen}/bin/screen -dmS sunshine ${pkgs.sunshine}/bin/sunshine";
     };
   };
 
