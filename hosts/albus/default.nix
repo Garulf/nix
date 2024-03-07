@@ -16,6 +16,7 @@ in
       ./pkgs.nix
       ../../users/garulf.nix
       ./openrgb.nix
+      ./firewall.nix
     ];
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
@@ -130,10 +131,6 @@ in
   # Enable the OpenSSH daemon.
   # services.openssh.enable = true;
 
-  # Open ports in the firewall.
-  networking.firewall.allowedTCPPorts = [ 
-    6742 # OpenRGB
-  ];
   # networking.firewall.allowedUDPPorts = [ ... ];
   # Or disable the firewall altogether.
   # networking.firewall.enable = false;
