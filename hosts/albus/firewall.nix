@@ -10,7 +10,7 @@
     48010 # Sunshine
   ];
   networking.firewall.allowedUDPPortRanges = [ 
-    { from = 47998; to = 48000; }
+    { from = 47998; to = 48000; } # Sunshine
   ];
 
 }
