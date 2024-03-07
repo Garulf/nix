@@ -3,6 +3,7 @@
 {
   imports = [
     ../wm/gnome.nix
+    ../pkgs/discord.nix
   ];
 
   users.users.garulf = {
@@ -12,7 +13,6 @@
     shell = pkgs.zsh;
     packages = with pkgs; [
       firefox
-      discord
       cider
       bitwarden
       ulauncher
