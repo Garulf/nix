@@ -125,7 +125,7 @@ in
   };
 
 
-  systemd.services.sunshine = {
+  systemd.user.services.sunshine = {
     description = "Sunshine is a Game stream host for Moonlight.";
     wantedBy = [ "graphical-session.target" ];
     serviceConfig = {
