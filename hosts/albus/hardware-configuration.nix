@@ -29,6 +29,11 @@
       options = ["rw" "nosuid" "exec" "user" "nodev" "relatime" "nofail" "uid=1000" "gid=100" "iocharset=utf8" "uhelper=udisks2"];
     };
 
+  fileSystems."/run/media/garulf/Storage" =
+    { device = "/dev/md0";
+      fsType = "ext4";
+    };
+
   swapDevices = [ ];
 
   # Enables DHCP on each ethernet and wireless interface. In case of scripted networking
