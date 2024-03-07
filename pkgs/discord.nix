@@ -7,7 +7,7 @@
     serviceConfig = {
       Restart = "always";
       RestartSec = "5";
-      ExecStart = "${pkgs.discord}/bin/discord";
+      ExecStart = "${pkgs.discord}/bin/discord --start-minimized";
     };
   };
 }
