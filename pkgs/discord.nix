@@ -2,7 +2,7 @@
 
 {
   systemd.user.services.discord = {
-    description = "Discord Chat Application";
+    description = "Launches Discord on login.";
     wantedBy = [ "graphical-session.target" ];
     serviceConfig = {
       Restart = "always";
