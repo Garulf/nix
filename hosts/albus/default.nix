@@ -134,7 +134,7 @@ in
       Restart = "always";
       RestartSec = "5";
       ExecStart = ''${pkgs.sunshine}/bin/sunshine'';
-      ExecStop = ''${pkgs.sunshine}/bin/sunshine' --stop';
+      ExecStop = ''${pkgs.sunshine}/bin/sunshine' --stop'';
     };
   };
 
