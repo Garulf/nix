@@ -14,14 +14,14 @@
   boot.extraModulePackages = [ ];
 
   boot.initrd.preLVMCommands = ''
-    mdadm --assemble /dev/md0
+    mdadm --run /dev/md0
   '';
 
   systemd.services.raid-monitor = {
     description = "Mdadm Raid Monitor";
     wantedBy = [ "multi-user.target" ];
     after = [ "postfix.service" ];
-    serviceConfig.ExecStart = "${pkgs.mdadm}/bin/mdadm --monitor --scan";
+    serviceConfig.ExecStart = "${pkgs.mdadm}/bin/mdadm --assemble --scan";
   };
 
   environment.etc."mdadm.conf".text = ''
