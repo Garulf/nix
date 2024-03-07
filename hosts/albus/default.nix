@@ -131,7 +131,7 @@ in
     serviceConfig = {
       Restart = "always";
       RestartSec = "5";
-      ExecStart = "${pkgs.screen}/bin/screen -dmS sunshine ${pkgs.sunshine}/bin/sunshine";
+      ExecStart = "${pkgs.sunshine}/bin/sunshine";
     };
   };
 
