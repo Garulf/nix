@@ -18,6 +18,7 @@
       ulauncher
       google-chrome
       gamemode
+      vscode
       prismlauncher
     ];
   };
