@@ -29,7 +29,7 @@
       options = ["rw" "nosuid" "exec" "user" "nodev" "relatime" "nofail" "uid=1000" "gid=100" "iocharset=utf8" "uhelper=udisks2"];
     };
 
-  fileSystems."/run/media/Storage" =
+  fileSystems."/mnt/Storage" =
     { device = "/dev/md0";
       fsType = "ext4";
       options = ["nosuid" "nodev" "nofail" "x-gvfs-show" "rw" "exec"];
