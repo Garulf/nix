@@ -33,6 +33,7 @@
     { device = "/dev/md0";
       fsType = "ext4";
       options = ["nosuid" "user" "nodev" "nofail" "x-gvfs-show" "rw" "exec"];
+      label = "Storage";
     };
 
   swapDevices = [ ];
