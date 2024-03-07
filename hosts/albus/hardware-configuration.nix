@@ -13,6 +13,9 @@
   boot.kernelModules = [ "kvm-amd" ];
   boot.extraModulePackages = [ ];
 
+  boot.initrd.preLVMCommands = ''
+    mdadm --run /dev/md127
+  '';
 
   systemd.services.raid-monitor = {
     description = "Mdadm Raid Monitor";
