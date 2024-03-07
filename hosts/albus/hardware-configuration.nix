@@ -26,7 +26,7 @@
   fileSystems."/mnt/Games M.2" =
     { device = "/dev/disk/by-uuid/BC96451A9644D694";
       fsType = "ntfs-3g";
-      options = ["rw" "nosuid" "exec" "user" "nodev" "relatime" "nofail" "uid=1000" "gid=100" "iocharset=utf8" "uhelper=udisks2"];
+      options = ["x-gvfs-show" "rw" "nosuid" "exec" "user" "nodev" "relatime" "nofail" "uid=1000" "gid=100" "iocharset=utf8" "uhelper=udisks2"];
     };
 
   fileSystems."/mnt/Storage" =
