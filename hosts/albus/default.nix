@@ -113,8 +113,6 @@ in
   #   enableSSHSupport = true;
   # };
 
-
-
   hardware.opengl = {
     enable = true;
     extraPackages = with pkgs; [
@@ -126,14 +124,14 @@ in
     driSupport32Bit = true;
   };
 
-  # List services that you want to enable:
+  cfg = config.services.sunshine;
+  systemd.user.services = {
+    sunshine = {
+      Unit.Description = "Sunshine is a Game stream host for Moonlight.";
+      Service.ExecStart = "${cfg.package}/bin/sunshine";
+      Install.WantedBy = [ "graphical-session.target" ];
+    };
 
-  # Enable the OpenSSH daemon.
-  # services.openssh.enable = true;
-
-  # networking.firewall.allowedUDPPorts = [ ... ];
-  # Or disable the firewall altogether.
-  # networking.firewall.enable = false;
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
