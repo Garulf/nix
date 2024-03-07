@@ -129,6 +129,7 @@ in
     description = "Sunshine is a Game stream host for Moonlight.";
     wantedBy = [ "graphical-session.target" ];
     serviceConfig = {
+      Type = "simple";
       User = "garulf";
       Restart = "always";
       RestartSec = "5";
