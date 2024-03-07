@@ -31,7 +31,7 @@
 
   fileSystems."/mnt/Storage" =
     { device = "/dev/md0";
-      fsType = "btrfs";
+      fsType = "ext4";
       options = ["nosuid" "nodev" "nofail" "x-gvfs-show" "rw" "exec"];
     };
 
