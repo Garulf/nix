@@ -33,7 +33,7 @@
   fileSystems."/mnt/Storage" =
     { device = "/dev/md0";
       fsType = "ext4";
-      options = ["defaults" "nofail" "x-gvfs-show";
+      options = ["defaults" "nofail" "x-gvfs-show"];
       label = "Storage";
     };
 
