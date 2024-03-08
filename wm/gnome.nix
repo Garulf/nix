@@ -32,5 +32,6 @@
     gnomeExtensions.appindicator
     gnomeExtensions.caffeine
     gnome.gnome-remote-desktop
+    gnome.gnome-boxes
   ];
 }
