@@ -27,7 +27,7 @@
   fileSystems."/mnt/Games" =
     { device = "/dev/nvme1n1p1";
       fsType = "ext4";
-      options = ["x-gvfs-show" "rw" "nosuid" "exec" "user" "nodev" "nofail"];
+      options = ["nosuid" "user" "nodev" "nofail" "x-gvfs-show" "rw" "exec"];
     };
 
   fileSystems."/mnt/Storage" =
