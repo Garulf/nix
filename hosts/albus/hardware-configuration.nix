@@ -24,10 +24,10 @@
       fsType = "vfat";
     };
 
-  fileSystems."/mnt/Games M.2" =
-    { device = "/dev/disk/by-uuid/BC96451A9644D694";
-      fsType = "ntfs-3g";
-      options = ["x-gvfs-show" "rw" "nosuid" "exec" "user" "nodev" "relatime" "nofail" "uid=1000" "gid=100" "iocharset=utf8" "uhelper=udisks2"];
+  fileSystems."/mnt/Games" =
+    { device = "/dev/disk/by-uuid/6DEFF200-E652-42EC-BCBC-D2970331346E";
+      fsType = "ext4";
+      options = ["x-gvfs-show" "rw" "nosuid" "exec" "user" "nodev" "nofail"];
     };
 
   fileSystems."/mnt/Storage" =
