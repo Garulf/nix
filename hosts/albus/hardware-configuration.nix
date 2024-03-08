@@ -25,7 +25,7 @@
     };
 
   fileSystems."/mnt/Games" =
-    { device = "/dev/disk/by-uuid/6DEFF200-E652-42EC-BCBC-D2970331346E";
+    { device = "/dev/nvme1n1p1";
       fsType = "ext4";
       options = ["x-gvfs-show" "rw" "nosuid" "exec" "user" "nodev" "nofail"];
     };
