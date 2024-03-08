@@ -41,14 +41,13 @@
     defaultEditor = true;
   };
 
-
-  virtualisation = {
-    libvirtd = {
-      enable = true;
-      qemu.ovmf = true;
-      qemu.swtpm = true;
-    };
+  virtualisation.libvirtd.enable = true;
+  virtualisation.qemu = {
+    enable = true;
+    ovmf = true;
+    swtpm = true;
   };
+
   programs.virt-manager.enable = true;
 }
 
