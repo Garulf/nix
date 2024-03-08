@@ -8,7 +8,7 @@
     description = "Mdadm Raid Monitor";
     wantedBy = [ "multi-user.target" ];
     after = [ "postfix.service" ];
-    serviceConfig.ExecStart = "${pkgs.mdadm}/bin/mdadm --assemble --scan";
+    serviceConfig.ExecStart = "${pkgs.mdadm}/bin/mdadm --assemble";
   };
 
   environment.etc."mdadm.conf".text = ''
