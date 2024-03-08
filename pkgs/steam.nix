@@ -7,7 +7,7 @@
     serviceConfig = {
       Restart = "on-failure";
       RestartSec = "5";
-      ExecStart = "${pkgs.steam}/bin/steam -nochatui -nofriendsui -silent";
+      ExecStart = "${pkgs.steam}/bin/${pkgs.steam.pname} -nochatui -nofriendsui -silent";
     };
   };
 
