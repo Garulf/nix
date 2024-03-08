@@ -17,6 +17,8 @@
      sunshine
      qemu
      libvirt
+     virt-viewer
+     virt-manager
      (vscode-with-extensions.override {
        vscodeExtensions = with vscode-extensions; [
          bbenoist.nix
