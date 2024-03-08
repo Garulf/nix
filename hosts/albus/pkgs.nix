@@ -45,8 +45,8 @@
   virtualisation = {
     libvirtd = {
       enable = true;
-      ovmf = true;
-      swtpm = true;
+      qemu.ovmf = true;
+      qemu.swtpm = true;
     };
   };
   programs.virt-manager.enable = true;
