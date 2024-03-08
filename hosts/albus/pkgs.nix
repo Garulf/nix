@@ -42,7 +42,7 @@
   };
 
   virtualisation.libvirtd.enable = true;
-  virtualisation.qemu = {
+  virtualisation.libvirtd.qemu = {
     enable = true;
     ovmf = true;
     swtpm = true;
