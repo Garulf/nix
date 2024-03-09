@@ -24,9 +24,8 @@ generation=$(echo $current | cut -d ' ' -f 1)
 git commit -am "$current"
 
 
-if [ $? -eq 0 ]; then
-  git tag -a "$generation" -m "$current"
-fi
+
+git tag -a "$generation" -m "$current"
 
 # clean up older generations
 # sudo nix-collect-garbage --delete-older-than 14d
