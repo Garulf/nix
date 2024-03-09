@@ -7,7 +7,6 @@
       ../../pkgs/openrgb.nix
     ];
   environment.systemPackages = with pkgs; [
-     lm_sensors
      vim
      steam
      openrgb
