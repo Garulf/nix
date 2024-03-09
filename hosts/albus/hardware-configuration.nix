@@ -27,13 +27,13 @@
   fileSystems."/mnt/Games" =
     { device = "/dev/nvme1n1p1";
       fsType = "ext4";
-      options = ["defaults" "nofail" "x-gvfs-show"];
+      options = ["nofail" "x-gvfs-show"];
     };
 
   fileSystems."/mnt/Storage" =
     { device = "/dev/md0";
       fsType = "ext4";
-      options = ["defaults" "nofail" "x-gvfs-show"];
+      options = ["nofail" "x-gvfs-show"];
       label = "Storage";
     };
 
