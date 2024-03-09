@@ -7,6 +7,7 @@
       ../../pkgs/openrgb.nix
     ];
   environment.systemPackages = with pkgs; [
+     mdadm
      lm_sensors
      vim
      steam
