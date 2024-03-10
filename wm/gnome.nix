@@ -34,5 +34,6 @@
     gnomeExtensions.systemstatsplus
     gnome.gnome-remote-desktop
     gnome.gnome-boxes
+    gtop
   ];
 }
