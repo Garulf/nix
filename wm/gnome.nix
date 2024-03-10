@@ -33,6 +33,7 @@
     gnomeExtensions.caffeine
     gnomeExtensions.systemstatsplus
     gnome.gnome-remote-desktop
+    gnomeExtensions.tophat
     gnome.gnome-boxes
     gtop
   ];
