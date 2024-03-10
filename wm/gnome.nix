@@ -31,6 +31,7 @@
     gnomeExtensions.just-perfection
     gnomeExtensions.appindicator
     gnomeExtensions.caffeine
+    gnomeExtensions.systemstatsplus
     gnome.gnome-remote-desktop
     gnome.gnome-boxes
   ];
