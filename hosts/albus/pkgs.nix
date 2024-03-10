@@ -6,6 +6,7 @@
       ../../pkgs/steam.nix
       ../../pkgs/openrgb.nix
       ../../pkgs/sunshine.nix
+      ../../pkgs/virt.nix
     ];
   environment.systemPackages = with pkgs; [
      mdadm
@@ -17,11 +18,6 @@
      gzdoom
      prismlauncher
      gamemode
-     sunshine
-     qemu
-     libvirt
-     virt-viewer
-     virt-manager
      (vscode-with-extensions.override {
        vscodeExtensions = with vscode-extensions; [
          bbenoist.nix
@@ -43,8 +39,5 @@
     enable = true;
     defaultEditor = true;
   };
-
-  virtualisation.libvirtd.enable = true;
-  programs.virt-manager.enable = true;
 }
 
