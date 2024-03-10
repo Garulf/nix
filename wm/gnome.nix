@@ -36,4 +36,11 @@
     gnome.gnome-boxes
     gtop
   ];
+
+  environment.variables = {
+    GI_TYPELIB_PATH = "/run/current-system/sw/lib/girepository-1.0";
+  };
+  environment.systemPackages = with pkgs; [
+    libgtop
+  ];
 }
