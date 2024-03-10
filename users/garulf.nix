@@ -19,6 +19,7 @@
       google-chrome
       vscode
       screen
+      discord
     ];
   };
 
