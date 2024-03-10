@@ -36,12 +36,10 @@
     gnomeExtensions.tophat
     gnome.gnome-boxes
     gtop
+    libgtop
   ];
 
   environment.variables = {
     GI_TYPELIB_PATH = "/run/current-system/sw/lib/girepository-1.0";
   };
-  environment.systemPackages = with pkgs; [
-    libgtop
-  ];
 }
