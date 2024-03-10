@@ -10,7 +10,7 @@
     serviceConfig = {
       Restart = "on-failure";
       RestartSec = "5";
-      ExecStart = "${pkgs.openrgb}/bin/openrgb --server --startminimized";
+      ExecStart = "${pkgs.openrgb-with-all-plugins}/bin/openrgb --server --startminimized";
     };
   };
 
