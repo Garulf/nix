@@ -13,8 +13,6 @@
      lm_sensors
      vim
      steam
-     openrgb
-     openrgb-plugin-effects
      gzdoom
      prismlauncher
      gamemode
