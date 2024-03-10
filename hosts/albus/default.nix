@@ -123,21 +123,6 @@ in
   };
 
 
-  systemd.user.services.sunshine = {
-    description = "Sunshine is a Game stream host for Moonlight.";
-    wantedBy = [ "graphical-session.target" ];
-    serviceConfig = {
-      Restart = "always";
-      RestartSec = "5";
-      ExecStart = "${pkgs.sunshine}/bin/sunshine";
-    };
-  };
-
-  boot.kernelModules = [ "uinput" ];
-  services.udev.extraRules = ''
-    KERNEL=="uinput", SUBSYSTEM=="misc", OPTIONS+="static_node=uinput", TAG+="uaccess"
-  '';
-
   services.flatpak.enable = true;
 
   # This value determines the NixOS release from which the default

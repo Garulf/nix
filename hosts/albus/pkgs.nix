@@ -5,6 +5,7 @@
     [
       ../../pkgs/steam.nix
       ../../pkgs/openrgb.nix
+      ../../pkgs/sunshine.nix
     ];
   environment.systemPackages = with pkgs; [
      mdadm
