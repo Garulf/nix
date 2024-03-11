@@ -44,4 +44,10 @@
   environment.variables = {
     GI_TYPELIB_PATH = "/run/current-system/sw/lib/girepository-1.0";
   };
+
+  # Needed for ddcutil
+  boot.kernelModules = ["i2c-dev"];
+  services.udev.extraRules = ''
+        KERNEL=="i2c-[0-9]*", GROUP="i2c", MODE="0660"
+  '';
 }
