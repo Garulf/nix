@@ -32,11 +32,13 @@
     gnomeExtensions.appindicator
     gnomeExtensions.caffeine
     gnomeExtensions.systemstatsplus
+    gnomeExtensions.brightness-control-using-ddcutil
     gnome.gnome-remote-desktop
     gnomeExtensions.tophat
     gnome.gnome-boxes
     gtop
     libgtop
+    ddcutil
   ];
 
   environment.variables = {
