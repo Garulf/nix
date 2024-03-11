@@ -20,6 +20,7 @@
       vscode
       screen
       discord
+      obsidian
     ];
   };
 
