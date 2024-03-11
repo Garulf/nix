@@ -23,13 +23,4 @@
       };
     };
   };
-
-  services.networking.websockify = {
-    enable = true;
-    sslCert = "/https-cert.pem";
-    sslKey = "/https-key.pem";
-    portMap = {
-      "5900" = 5900;
-    };
-  };
 }
