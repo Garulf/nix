@@ -23,4 +23,11 @@
       };
     };
   };
+
+  services.networking.websockify = {
+    enable = true;
+    portMap = {
+      "5900" = 5900;
+    };
+  };
 }
