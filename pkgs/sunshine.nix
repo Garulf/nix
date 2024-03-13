@@ -6,12 +6,14 @@
     sunshine
   ];
 
-  wrap = security.wrappers.sunshine = {
-      owner = "root";
-      group = "root";
-      capabilities = "cap_sys_admin+p";
-      source = "${pkgs.sunshine}/bin/sunshine";
-    };
+  wrapper = {
+    security.wrappers.sunshine = {
+        owner = "root";
+        group = "root";
+        capabilities = "cap_sys_admin+p";
+        source = "${pkgs.sunshine}/bin/sunshine";
+      };
+  };
 
   systemd.user.services.sunshine = {
     description = "Sunshine is a Game stream host for Moonlight.";
@@ -19,7 +21,7 @@
     serviceConfig = {
       Restart = "always";
       RestartSec = "5";
-      ExecStart = "${wrap.wrapperDir}/sunshine";
+      ExecStart = "${wrapper.security.wrapperDir}/sunshine";
     };
   };
 
