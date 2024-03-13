@@ -1,9 +1,13 @@
 { pkgs, lib, ...}:
 
 {
+
+  environment.systemPackages = with pkgs; [
+    sunshine
+  ];
+
   systemd.user.services.sunshine = {
     description = "Sunshine is a Game stream host for Moonlight.";
-    AmbientCapabilities= [ "CAP_SYS_ADMIN" ];
     wantedBy = [ "graphical-session.target" ];
     serviceConfig = {
       Restart = "always";
@@ -11,6 +15,13 @@
       ExecStart = "${pkgs.sunshine}/bin/sunshine";
     };
   };
+
+  security.wrappers.sunshine = {
+      owner = "root";
+      group = "root";
+      capabilities = "cap_sys_admin+p";
+      source = "${pkgs.sunshine}/bin/sunshine";
+    };
 
   services.avahi.publish.userServices = true;
 
