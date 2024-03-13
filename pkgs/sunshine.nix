@@ -19,8 +19,6 @@
     description = "Sunshine is a Game stream host for Moonlight.";
     wantedBy = [ "graphical-session.target" ];
     serviceConfig = {
-      AmbientCapabilities = "CAP_SYS_ADMIN";
-      CapabilityBoundingSet = "CAP_SYS_ADMIN";
       Restart = "always";
       RestartSec = "5";
       ExecStart = "${pkgs.sunshine}/bin/sunshine";
