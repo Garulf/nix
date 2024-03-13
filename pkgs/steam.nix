@@ -6,7 +6,7 @@ let
       name = "steam"; 
       package = my_steam;
       after = "-nochatui -nofriendsui -silent";
-    };
+    }
   );
 in
 {
