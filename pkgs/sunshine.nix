@@ -6,8 +6,8 @@
     sunshine
   ];
 
-  sun-wrapper = {
-    security.wrappers = {
+  security.wrappers = {
+     sunshine = {
       owner = "root";
       group = "root";
       capabilities = "cap_sys_admin+p";
