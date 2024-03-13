@@ -1,35 +1,19 @@
 { pkgs, lib, ...}:
 
-let 
-  security.wrappers.sunshine = {
-    owner = "root";
-    group = "root";
-    capabilities = "cap_sys_admin+p";
-    source = "${pkgs.sunshine}/bin/sunshine";
-  };
-in
 {
 
   environment.systemPackages = with pkgs; [
     sunshine
   ];
 
-  wrapper = {
-    security.wrappers.sunshine = {
-        owner = "root";
-        group = "root";
-        capabilities = "cap_sys_admin+p";
-        source = "${pkgs.sunshine}/bin/sunshine";
-      };
-  };
-
   systemd.user.services.sunshine = {
     description = "Sunshine is a Game stream host for Moonlight.";
     wantedBy = [ "graphical-session.target" ];
+    ambientCapabilities = "CAP_SYS_ADMIN";
     serviceConfig = {
       Restart = "always";
       RestartSec = "5";
-      ExecStart = "${security.wrapperDir}/sunshine";
+      ExecStart = "${pkgs.sunshine}/bin/sunshine";
     };
   };
 
