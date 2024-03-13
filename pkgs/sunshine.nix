@@ -1,5 +1,8 @@
-{ pkgs, lib, ...}:
+{ config, pkgs, lib, ...}:
 
+let
+  cfg = config.services.sunshine;
+in
 {
 
   environment.systemPackages = with pkgs; [
