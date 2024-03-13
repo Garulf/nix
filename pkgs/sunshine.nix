@@ -6,7 +6,7 @@
     sunshine
   ];
 
-  security.wrappers = {
+  test = security.wrappers = {
      sunshine = {
       owner = "root";
       group = "root";
