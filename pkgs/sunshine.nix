@@ -3,7 +3,7 @@
 {
   systemd.user.services.sunshine = {
     description = "Sunshine is a Game stream host for Moonlight.";
-    wantedBy = [ "graphical-session.target" ];
+    after = [ "network.target" "multi-user.target" ];
     serviceConfig = {
       Restart = "always";
       RestartSec = "5";
