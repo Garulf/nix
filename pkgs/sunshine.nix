@@ -19,7 +19,7 @@
     serviceConfig = {
       Restart = "always";
       RestartSec = "5";
-      ExecStart = "${config.security.wrapperDir}/sunshine"
+      ExecStart = "${config.security.wrapperDir}/sunshine";
     };
   };
 
