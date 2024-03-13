@@ -6,22 +6,22 @@
     sunshine
   ];
 
-  systemd.user.services.sunshine = {
-    description = "Sunshine is a Game stream host for Moonlight.";
-    wantedBy = [ "graphical-session.target" ];
-    serviceConfig = {
-      Restart = "always";
-      RestartSec = "5";
-      ExecStart = "${pkgs.sunshine}/bin/sunshine";
-    };
-  };
-
   security.wrappers.sunshine = {
       owner = "root";
       group = "root";
       capabilities = "cap_sys_admin+p";
       source = "${pkgs.sunshine}/bin/sunshine";
     };
+
+  systemd.user.services.sunshine = {
+    description = "Sunshine is a Game stream host for Moonlight.";
+    wantedBy = [ "graphical-session.target" ];
+    serviceConfig = {
+      Restart = "always";
+      RestartSec = "5";
+      ExecStart = "${security.wrapperDir}/sunshine";
+    };
+  };
 
   services.avahi.publish.userServices = true;
 
