@@ -12,8 +12,6 @@
     capabilities = "cap_sys_admin+p";
     source = "${pkgs.sunshine}/bin/sunshine";
   };
-    
-  }
 
   systemd.user.services.sunshine = {
     description = "Sunshine is a Game stream host for Moonlight.";
