@@ -24,7 +24,7 @@ in
     serviceConfig = {
       Restart = "always";
       RestartSec = "5";
-      ExecStart = "${security.wrapperDir}/sunshine";
+      ExecStart = "${pkgs.sunshine}/bin/sunshine";
     };
   };
 
