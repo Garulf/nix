@@ -6,7 +6,7 @@
     sunshine
   ];
 
-  sunshine = {
+  sunshine = security.wrapper = {
     owner = "root";
     group = "root";
     capabilities = "cap_sys_admin+p";
