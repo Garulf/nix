@@ -33,6 +33,8 @@
      })
   ];
 
+  services.sunshine.enable = true;
+
   programs.neovim = {
     enable = true;
     defaultEditor = true;
