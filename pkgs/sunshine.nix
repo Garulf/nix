@@ -6,7 +6,7 @@
     sunshine
   ];
 
-  security.wrappers.sunshine = {
+  wrap = security.wrappers.sunshine = {
       owner = "root";
       group = "root";
       capabilities = "cap_sys_admin+p";
@@ -19,7 +19,7 @@
     serviceConfig = {
       Restart = "always";
       RestartSec = "5";
-      ExecStart = "${security.wrapperDir}/sunshine";
+      ExecStart = "${wrap.wrapperDir}/sunshine";
     };
   };
 
