@@ -9,12 +9,14 @@ in
     sunshine
   ];
 
-  security.wrappers = {
-     sunshine = {
-      owner = "root";
-      group = "root";
-      capabilities = "cap_sys_admin+p";
-      source = "${pkgs.sunshine}/bin/sunshine";
+  config.services.sunshine = {
+    security.wrappers = {
+      sunshine = {
+        owner = "root";
+        group = "root";
+        capabilities = "cap_sys_admin+p";
+        source = "${pkgs.sunshine}/bin/sunshine";
+      };
     };
   };
 
@@ -24,7 +26,7 @@ in
     serviceConfig = {
       Restart = "always";
       RestartSec = "5";
-      ExecStart = "${pkgs.sunshine}/bin/sunshine";
+      ExecStart = "${config.security.wrapperDir}/sunshine"
     };
   };
 
