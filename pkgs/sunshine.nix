@@ -6,11 +6,13 @@
     sunshine
   ];
 
-  sunshine = security.wrappers = {
-    owner = "root";
-    group = "root";
-    capabilities = "cap_sys_admin+p";
-    source = "${pkgs.sunshine}/bin/sunshine";
+  sun-wrapper = {
+    security.wrappers = {
+      owner = "root";
+      group = "root";
+      capabilities = "cap_sys_admin+p";
+      source = "${pkgs.sunshine}/bin/sunshine";
+    };
   };
 
   systemd.user.services.sunshine = {
