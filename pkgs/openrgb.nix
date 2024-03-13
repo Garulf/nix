@@ -6,9 +6,9 @@
 
   systemd.user.services.openrgb = {
     description = "Launches Openrgb on login.";
-    wantedBy = [ "graphical-session.target" ];
+    after = [ "network.target" "multi-user.target" ]
     serviceConfig = {
-      Restart = "on-failure";
+      Restart = "always";
       RestartSec = "5";
       ExecStart = "${pkgs.openrgb-with-all-plugins}/bin/openrgb --server --startminimized";
     };
