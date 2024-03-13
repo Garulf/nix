@@ -1,37 +1,35 @@
-{ pkgs, lib, ...}:
+{ config, pkgs, lib, ...}:
 
 let
-  wrapper = {
+  cfg = config.services.sunshine;
+in
+{
+  config = mkIf cfg.enable {
+
+    environment.systemPackages = with pkgs; [
+      sunshine
+    ];
+
     security.wrappers.sunshine = {
       owner = "root";
       group = "root";
       capabilities = "cap_sys_admin+p";
       source = "${pkgs.sunshine}/bin/sunshine";
     };
-  };
-in
-{
 
-  environment.systemPackages = with pkgs; [
-    sunshine
-  ];
-
-  security.wrappers.sunshine = {
-    owner = "root";
-    group = "root";
-    capabilities = "cap_sys_admin+p";
-    source = "${pkgs.sunshine}/bin/sunshine";
-  };
-
-  systemd.user.services.sunshine = {
-    description = "Sunshine is a Game stream host for Moonlight.";
-    wantedBy = [ "graphical-session.target" ];
-    serviceConfig = {
-      Restart = "always";
-      RestartSec = "5";
-      ExecStart = "${wrapper.security.wrapperDir}/sunshine";
+    systemd.user.services.sunshine = {
+      description = "Sunshine is a Game stream host for Moonlight.";
+      wantedBy = [ "graphical-session.target" ];
+      serviceConfig = {
+        Restart = "always";
+        RestartSec = "5";
+        ExecStart = "${config.security.wrapperDir}/sunshine";
+      };
     };
   };
+
+
+
 
   services.avahi.publish.userServices = true;
 
