@@ -36,15 +36,14 @@ with lib;
         ExecStart = "${config.security.wrapperDir}/sunshine";
       };
     };
+
+
+    services.avahi.publish.userServices = true;
+
+    boot.kernelModules = [ "uinput" ];
+    services.udev.extraRules = ''
+      KERNEL=="uinput", SUBSYSTEM=="misc", OPTIONS+="static_node=uinput", TAG+="uaccess"
+    '';
+
   };
-
-
-
-
-  services.avahi.publish.userServices = true;
-
-  boot.kernelModules = [ "uinput" ];
-  services.udev.extraRules = ''
-    KERNEL=="uinput", SUBSYSTEM=="misc", OPTIONS+="static_node=uinput", TAG+="uaccess"
-  '';
 }
