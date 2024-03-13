@@ -1,5 +1,13 @@
 { pkgs, lib, ...}:
 
+let 
+  security.wrappers.sunshine = {
+    owner = "root";
+    group = "root";
+    capabilities = "cap_sys_admin+p";
+    source = "${pkgs.sunshine}/bin/sunshine";
+  };
+in
 {
 
   environment.systemPackages = with pkgs; [
@@ -21,7 +29,7 @@
     serviceConfig = {
       Restart = "always";
       RestartSec = "5";
-      ExecStart = "${wrapper.security.wrapperDir}/sunshine";
+      ExecStart = "${security.wrapperDir}/sunshine";
     };
   };
 
