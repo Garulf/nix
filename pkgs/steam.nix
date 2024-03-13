@@ -5,8 +5,8 @@ let
     pkgs.makeAutostartItem { 
       name = "steam"; 
       package = my_steam;
-      after = "-nochatui -nofriendsui -silent"
-    }
+      after = "-nochatui -nofriendsui -silent";
+    };
   );
 in
 {
