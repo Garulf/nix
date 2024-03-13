@@ -4,7 +4,7 @@ let
   steam_autostart = (
     pkgs.makeAutostartItem { 
       name = "steam"; 
-      package = my_steam;
+      package = pkgs.steam;
       after = "-nochatui -nofriendsui -silent";
     }
   );
