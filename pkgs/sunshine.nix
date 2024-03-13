@@ -3,7 +3,7 @@
 {
   systemd.user.services.sunshine = {
     description = "Sunshine is a Game stream host for Moonlight.";
-    AmbientCapabilities=CAP_SYS_ADMIN;
+    AmbientCapabilities= [ "CAP_SYS_ADMIN" ];
     wantedBy = [ "graphical-session.target" ];
     serviceConfig = {
       Restart = "always";
@@ -11,6 +11,8 @@
       ExecStart = "${pkgs.sunshine}/bin/sunshine";
     };
   };
+
+  services.avahi.publish.userServices = true
 
   boot.kernelModules = [ "uinput" ];
   services.udev.extraRules = ''
