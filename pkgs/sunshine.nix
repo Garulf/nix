@@ -4,6 +4,14 @@ let
   cfg = config.services.sunshine;
 in
 {
+  options = {
+
+    services.sunshine = {
+      enable = mkEnableOption (mdDoc "Sunshine");
+    };
+
+  };
+
   config = mkIf cfg.enable {
 
     environment.systemPackages = with pkgs; [
