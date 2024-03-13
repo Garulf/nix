@@ -1,20 +1,20 @@
 { config, pkgs, lib, ...}:
 
-with lib;
-
 let
   cfg = config.services.sunshine;
 in
+
+with lib;
+
 {
   options = {
-
     services.sunshine = {
       enable = mkEnableOption (mdDoc "Sunshine");
     };
 
   };
 
-  config = mkIf config.services.sunshine.enable{
+  config = mkIf cfg.enable {
 
     environment.systemPackages = with pkgs; [
       sunshine
