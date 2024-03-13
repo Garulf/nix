@@ -12,6 +12,7 @@
      mdadm
      lm_sensors
      vim
+     steam
      gzdoom
      prismlauncher
      gamemode
