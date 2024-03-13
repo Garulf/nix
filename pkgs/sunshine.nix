@@ -12,7 +12,7 @@ in
 
   };
 
-  config = mkIf cfg.enable {
+  config = mkIf config.services.sunshine.enable{
 
     environment.systemPackages = with pkgs; [
       sunshine
