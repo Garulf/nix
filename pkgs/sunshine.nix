@@ -12,7 +12,7 @@
     };
   };
 
-  services.avahi.publish.userServices = true
+  services.avahi.publish.userServices = true;
 
   boot.kernelModules = [ "uinput" ];
   services.udev.extraRules = ''
