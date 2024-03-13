@@ -29,7 +29,7 @@ in
     serviceConfig = {
       Restart = "always";
       RestartSec = "5";
-      ExecStart = "${wrapper.wrapperDir}/sunshine";
+      ExecStart = "${wrapper.security.wrapperDir}/sunshine";
     };
   };
 
