@@ -6,7 +6,7 @@
 
   systemd.user.services.openrgb = {
     description = "Launches Openrgb on login.";
-    after = [ "network.target" "multi-user.target" ]
+    after = [ "network.target" "multi-user.target" ];
     serviceConfig = {
       Restart = "always";
       RestartSec = "5";
