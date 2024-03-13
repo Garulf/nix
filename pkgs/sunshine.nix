@@ -1,21 +1,16 @@
-{ config, pkgs, lib, ...}:
+{ pkgs, lib, security, ...}:
 
-let
-  cfg = config.services.sunshine;
-in
 {
 
   environment.systemPackages = with pkgs; [
     sunshine
   ];
 
-  config.services.sunshine = {
-    security.wrappers.sunshine = {
-      owner = "root";
-      group = "root";
-      capabilities = "cap_sys_admin+p";
-      source = "${pkgs.sunshine}/bin/sunshine";
-    };
+  security.wrappers.sunshine = {
+    owner = "root";
+    group = "root";
+    capabilities = "cap_sys_admin+p";
+    source = "${pkgs.sunshine}/bin/sunshine";
   };
 
   systemd.user.services.sunshine = {
