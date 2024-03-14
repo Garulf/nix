@@ -1,18 +1,15 @@
 { pkgs, lib, ...}:
 
-let
-  steam_autostart = (
-    pkgs.makeAutostartItem { 
-      name = "steam"; 
-      package = pkgs.steam;
-      after = "-nochatui -nofriendsui -silent";
-    }
-  );
-in
 {
-  environment.systemPackages = with pkgs; [
-    steam_autostart
-  ];
+  systemd.user.services.steam = {
+    description = "Launches Steam on login.";
+    wantedBy = [ "graphical-session.target" ];
+    serviceConfig = {
+      Restart = "on-failure";
+      RestartSec = "5";
+      ExecStart = "${pkgs.steam}/bin/steam -nochatui -nofriendsui -silent";
+    };
+  };
 
   programs.steam = {
     remotePlay.openFirewall = true;
