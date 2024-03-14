@@ -16,6 +16,7 @@
      gzdoom
      prismlauncher
      gamemode
+     input-remapper
      (vscode-with-extensions.override {
        vscodeExtensions = with vscode-extensions; [
          bbenoist.nix
