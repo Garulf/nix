@@ -34,6 +34,7 @@
     gnomeExtensions.caffeine
     gnomeExtensions.systemstatsplus
     gnomeExtensions.brightness-control-using-ddcutil
+    gnomeExtensions.gamemode-indicator-in-system-settings
     gnome.gnome-remote-desktop
     gnomeExtensions.tophat
     gnome.gnome-boxes
