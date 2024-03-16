@@ -127,7 +127,7 @@ in
   security.polkit.extraConfig = ''
     polkit.addRule(function(action, subject) {
       if (
-        subject.isInGroup("power")
+        subject.isInGroup("users")
           && (
             action.id == "org.freedesktop.login1.reboot" ||
             action.id == "org.freedesktop.login1.reboot-multiple-sessions" ||
@@ -138,7 +138,7 @@ in
           )
         )
       {
-        return polkit.Result.YES;
+        return polkit.Result.NO;
       }
     })
   '';
