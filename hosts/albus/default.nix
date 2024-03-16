@@ -141,17 +141,6 @@ in
   })
 '';
 
-  services.avahi = {
-    enable = true;
-    nssmdns = true;  # printing
-    publish = {
-      enable = true;
-      addresses = true;
-      workstation = true;
-      userServices = true;
-    };
-  };
-
   services.flatpak.enable = true;
 
   # This value determines the NixOS release from which the default

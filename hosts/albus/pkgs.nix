@@ -6,6 +6,7 @@
       ../../pkgs/steam.nix
       ../../pkgs/openrgb.nix
       ../../pkgs/sunshine.nix
+      ../../pkgs/rpiplay.nix
       ../../pkgs/virt.nix
     ];
   environment.systemPackages = with pkgs; [
@@ -17,7 +18,6 @@
      prismlauncher
      gamemode
      lutris
-     rpiplay
      input-remapper
      synology-drive-client
      (vscode-with-extensions.override {
@@ -38,6 +38,7 @@
   ];
 
   services.sunshine.enable = true;
+  services.rpiplay.enable = true;
 
   programs.neovim = {
     enable = true;
