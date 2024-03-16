@@ -16,6 +16,7 @@
      gzdoom
      prismlauncher
      gamemode
+     lutris
      input-remapper
      synology-drive-client
      (vscode-with-extensions.override {
