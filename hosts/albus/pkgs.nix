@@ -17,6 +17,7 @@
      prismlauncher
      gamemode
      lutris
+     rpiplay
      input-remapper
      synology-drive-client
      (vscode-with-extensions.override {
@@ -37,8 +38,6 @@
   ];
 
   services.sunshine.enable = true;
-
-  programs.rpiplay.enable = true;
 
   programs.neovim = {
     enable = true;
