@@ -38,6 +38,8 @@
 
   services.sunshine.enable = true;
 
+  programs.rpiplay.enable = true;
+
   programs.neovim = {
     enable = true;
     defaultEditor = true;
