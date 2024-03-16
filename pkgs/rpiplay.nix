@@ -37,7 +37,7 @@ with lib;
       serviceConfig = {
         Restart = "always";
         RestartSec = "5";
-        ExecStart = "${pkgs.rpiplay}/bin/rpiplay -n ${config.services.avahi.publish.hostName} -b";
+        ExecStart = "${pkgs.rpiplay}/bin/rpiplay -n ${config.networking.hostName} -b";
       };
     };
   };
