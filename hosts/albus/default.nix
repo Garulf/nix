@@ -138,7 +138,7 @@ in
           )
         )
       {
-        return polkit.Result.NO;
+        return polkit.Result.YES;
       }
     })
   '';
