@@ -31,6 +31,15 @@ with lib;
       };
     };
 
+    networking.firewall.allowedTCPPorts = [
+      7000 # rpiplay 1
+      7100 # rpiplay 2
+    ];
+    networking.firewall.allowedUDPPortRanges = [
+      { from = 6000; to = 6001; } # rpiplay
+      { from = 7100; to = 7100; } # rpiplay
+    ];
+
     systemd.user.services.rpiplay = {
       description = "rpiplay airplay mirror server.";
       wantedBy = [ "graphical-session.target" ];
