@@ -132,7 +132,9 @@ in
           action.id == "org.freedesktop.login1.reboot" ||
           action.id == "org.freedesktop.login1.reboot-multiple-sessions" ||
           action.id == "org.freedesktop.login1.power-off" ||
-          action.id == "org.freedesktop.login1.power-off-multiple-sessions"
+          action.id == "org.freedesktop.login1.power-off-multiple-sessions" ||
+          action.id == "org.freedesktop.login1.suspend" ||
+          action.id == "org.freedesktop.login1.suspend-multiple-sessions"
         )
       )
     {
