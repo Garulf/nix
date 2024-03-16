@@ -9,7 +9,7 @@
   users.users.garulf = {
     isNormalUser = true;
     description = "garulf";
-    extraGroups = [ "networkmanager" "wheel" "libvirtd" "i2c" ];
+    extraGroups = [ "networkmanager" "wheel" "libvirtd" "i2c" "power" ];
     shell = pkgs.zsh;
     packages = with pkgs; [
       firefox
