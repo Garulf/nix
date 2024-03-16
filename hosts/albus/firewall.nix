@@ -15,6 +15,7 @@
   networking.firewall.allowedUDPPortRanges = [ 
     { from = 47998; to = 48000; } # Sunshine
     { from = 6000; to = 6001; } # rpiplay
+    { from = 7100; to = 7100; } # rpiplay
 
   ];
 
