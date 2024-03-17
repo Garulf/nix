@@ -21,6 +21,7 @@
       screen
       discord
       obsidian
+      remmina
     ];
   };
 
