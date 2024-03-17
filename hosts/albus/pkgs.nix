@@ -8,6 +8,7 @@
       ../../pkgs/sunshine.nix
       ../../pkgs/rpiplay.nix
       ../../pkgs/virt.nix
+      ../../pkgs/wine.nix
     ];
   environment.systemPackages = with pkgs; [
      mdadm
@@ -18,7 +19,6 @@
      prismlauncher
      gamemode
      lutris
-     wine
      input-remapper
      synology-drive-client
      (vscode-with-extensions.override {
