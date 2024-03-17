@@ -159,6 +159,8 @@ in
     };
   };
 
+  virtualisation.waydroid.enable = true;
+
   services.flatpak.enable = true;
 
   # This value determines the NixOS release from which the default
