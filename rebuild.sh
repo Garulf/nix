@@ -31,4 +31,6 @@ git tag -a "$generation" -m "$current"
 # sudo nix-collect-garbage --delete-older-than 14d
 # sudo nix-store --gc
 
+git push --follow-tags
+
 echo "Rebuild generation $generation complete!"
