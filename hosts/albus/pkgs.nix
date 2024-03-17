@@ -20,7 +20,6 @@
      gamemode
      lutris
      input-remapper
-     synology-drive-client
      cage
      weston
      (vscode-with-extensions.override {

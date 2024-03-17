@@ -22,6 +22,7 @@
       discord
       obsidian
       remmina
+      synology-drive-client
     ];
   };
 
