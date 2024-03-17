@@ -22,6 +22,7 @@
      input-remapper
      synology-drive-client
      cage
+     weston
      (vscode-with-extensions.override {
        vscodeExtensions = with vscode-extensions; [
          bbenoist.nix
