@@ -18,6 +18,7 @@
      prismlauncher
      gamemode
      lutris
+     wine
      input-remapper
      synology-drive-client
      (vscode-with-extensions.override {
