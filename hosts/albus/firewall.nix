@@ -10,6 +10,7 @@
     48010 # Sunshine
     3389 # RDP
     5900 # VNC
+    5901 # VNC
   ];
   networking.firewall.allowedUDPPortRanges = [ 
     { from = 47998; to = 48000; } # Sunshine
