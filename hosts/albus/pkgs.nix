@@ -40,7 +40,7 @@
      })
   ];
 
-  services.sunshine.enable = true;
+  services.sunshine.enable = false;
   services.rpiplay.enable = true;
 
   programs.neovim = {
