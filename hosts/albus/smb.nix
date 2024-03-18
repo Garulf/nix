@@ -20,7 +20,7 @@
     '';
     shares = {
       public = {
-        path = "/mnt/Shares/Public";
+        path = "/mnt/Storage/SteamLibrary";
         browseable = "yes";
         "read only" = "no";
         "guest ok" = "yes";
