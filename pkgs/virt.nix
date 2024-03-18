@@ -6,6 +6,7 @@
     libvirt
     virt-viewer
     virt-manager
+    virtiofsd
   ];
 
   virtualisation.libvirtd = {
