@@ -38,7 +38,6 @@
     gnome.gnome-remote-desktop
     gnomeExtensions.tophat
     gnome.gnome-boxes
-    gnome.dconf
     gtop
     libgtop
     ddcutil
