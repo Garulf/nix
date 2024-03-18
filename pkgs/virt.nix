@@ -1,10 +1,6 @@
 { pkgs, lib, ...}:
 
 {
-
-  boot.kernelModules = [ "kvm-amd" "amd_iommu=on" "vfio-pci" ];
-  boot.kernalParams = [ "iommu=pt" "amd_iommu=on" ];
-
   environment.systemPackages = with pkgs; [
     qemu
     libvirt
