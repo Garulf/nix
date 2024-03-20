@@ -3,7 +3,7 @@
 {
   imports = [
     ../wm/gnome.nix
-    ../wm/swaywm.nix
+   # ../wm/swaywm.nix
     ../pkgs/discord.nix
   ];
 
