@@ -32,7 +32,7 @@
     };
 
   fileSystems."/mnt/Storage" =
-    { device = "uuid=f5a9d26f-31b5-4434-a3b9-98b775ad4220";
+    { device = "UUID=f5a9d26f-31b5-4434-a3b9-98b775ad4220";
       fsType = "ext4";
       options = ["nodev" "rw" "user" "exec" "nosuid" "nofail" "x-gvfs-show"];
       label = "Storage";
