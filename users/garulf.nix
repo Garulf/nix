@@ -19,11 +19,20 @@
       google-chrome
       vscode
       screen
+      tmux
+      neovim
       discord
       obsidian
       remmina
       synology-drive-client
     ];
+  };
+
+  programs.zsh.enable = true;
+
+  programs.neovim = {
+    enable = true;
+    defaultEditor = true;
   };
 
   nixpkgs.config.permittedInsecurePackages = [

@@ -42,10 +42,5 @@
 
   services.sunshine.enable = true;
   services.rpiplay.enable = true;
-
-  programs.neovim = {
-    enable = true;
-    defaultEditor = true;
-  };
 }
 
