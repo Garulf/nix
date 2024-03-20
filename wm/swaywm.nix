@@ -40,6 +40,8 @@ let
 
 in
 {
+
+  services.xserver.displayManager.gdm.enable = true;
   environment.systemPackages = with pkgs; [
     alacritty # gpu accelerated terminal
     dbus   # make dbus-update-activation-environment available in the path
