@@ -32,7 +32,7 @@
     };
 
   fileSystems."/mnt/Storage" =
-    { device = "/dev/disk/by-uuid/05737bff-9cb2-4940-946f-ca7c30d7c0f1";
+    { device = "/dev/md0";
       fsType = "ext4";
       options = ["nodev" "rw" "user" "exec" "nosuid" "nofail" "x-gvfs-show"];
       label = "Storage";
