@@ -2,8 +2,8 @@
 
 {
   imports = [
-    ../wm/gnome.nix
-    # ../wm/swaywm.nix
+    # ../wm/gnome.nix
+    ../wm/i3.nix
     ../pkgs/discord.nix
   ];
 
