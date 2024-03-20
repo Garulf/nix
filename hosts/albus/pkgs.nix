@@ -23,6 +23,7 @@
      cage
      weston
      killall
+     yuzu-mainline
      (vscode-with-extensions.override {
        vscodeExtensions = with vscode-extensions; [
          bbenoist.nix
