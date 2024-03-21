@@ -40,13 +40,4 @@
     "electron-25.9.0" # for obsidian
   ];
 
-  makeDesktopItem {
-    name = "TeamSpeak";
-    exec = "TeamSpeak";
-    icon = "test";
-    desktopName = "test";
-    comment = "TeamSpeak Voice Communication Client";
-    categories = ["Audio" "AudioVideo" "Chat" "Network"];
-    }
-
 }
