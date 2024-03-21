@@ -18,8 +18,7 @@
     dunst
     libnotify
     swww
-    rofi-wayland
-    hypridle
+    rofi-wayland 
     (pkgs.waybar.overrideAttrs (oldAttrs: {
       mesonFlags = oldAttrs.mesonFlags or [] ++ [
         "-Dexperimental=true"
