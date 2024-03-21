@@ -3,7 +3,7 @@
 {
   imports = [
     ../wm/gnome.nix
-    # ../wm/i.nix
+    ../wm/hyprland.nix
     ../pkgs/discord.nix
   ];
 
@@ -41,7 +41,6 @@
 
   services.xserver.windowManager.dwm.enable = false;
   services.xserver.windowManager.i3.enable = false;
-  programs.hyprland.enable = true;
 
   nixpkgs.config.permittedInsecurePackages = [
     "electron-25.9.0" # for obsidian
