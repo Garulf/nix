@@ -40,6 +40,7 @@
   };
 
   services.xserver.windowManager.dwm.enable = true;
+  services.xserver.windowManager.i3.enable = true;
 
   nixpkgs.config.permittedInsecurePackages = [
     "electron-25.9.0" # for obsidian
