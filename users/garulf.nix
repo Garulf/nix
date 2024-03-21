@@ -28,6 +28,7 @@
       synology-drive-client
       neofetch
       zoxide
+      tuba
     ];
   };
 
