@@ -26,6 +26,7 @@
       obsidian
       remmina
       synology-drive-client
+      neofetch
     ];
   };
 
