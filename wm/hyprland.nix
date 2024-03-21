@@ -19,7 +19,6 @@
     libnotify
     swww
     rofi-wayland
-    hyprlock
     hypridle
     (pkgs.waybar.overrideAttrs (oldAttrs: {
       mesonFlags = oldAttrs.mesonFlags or [] ++ [
