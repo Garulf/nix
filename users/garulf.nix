@@ -27,6 +27,7 @@
       remmina
       synology-drive-client
       neofetch
+      zoxide
     ];
   };
 
