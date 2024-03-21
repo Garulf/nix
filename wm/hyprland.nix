@@ -17,9 +17,10 @@
     kitty
     dunst
     libnotify
-    swaylock
     swww
     rofi-wayland
+    hyprlock
+    hypridle
     (pkgs.waybar.overrideAttrs (oldAttrs: {
       mesonFlags = oldAttrs.mesonFlags or [] ++ [
         "-Dexperimental=true"
