@@ -32,6 +32,6 @@
     pkgs.xdg-desktop-portal-gtk
   ];
 
-  security.pam.swaylock = {};
+  #security.pam.swaylock = {};
 
 }
