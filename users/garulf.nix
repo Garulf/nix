@@ -39,8 +39,9 @@
     defaultEditor = true;
   };
 
-  services.xserver.windowManager.dwm.enable = true;
-  services.xserver.windowManager.i3.enable = true;
+  services.xserver.windowManager.dwm.enable = false;
+  services.xserver.windowManager.i3.enable = false;
+  programs.hyprland.enable = true;
 
   nixpkgs.config.permittedInsecurePackages = [
     "electron-25.9.0" # for obsidian
