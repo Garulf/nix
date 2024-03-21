@@ -17,6 +17,7 @@
     kitty
     dunst
     libnotify
+    swaylock
     swww
     rofi-wayland
     (pkgs.waybar.overrideAttrs (oldAttrs: {
@@ -30,4 +31,7 @@
   xdg.portal.extraPortals = [
     pkgs.xdg-desktop-portal-gtk
   ];
+
+  security.pam.swaylock = {};
+
 }
