@@ -3,7 +3,7 @@
 {
 
   desktopItems = [
-    (makeDesktopItem rec {
+    (pkgs.makeDesktopItem rec {
       name = "Sonic Robo Blast 2";
       exec = "test";
       icon = "test";
