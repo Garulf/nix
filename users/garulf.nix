@@ -21,6 +21,7 @@
       vscode
       screen
       tmux
+      kitty
       neovim
       obsidian
       remmina
