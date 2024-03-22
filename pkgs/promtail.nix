@@ -17,7 +17,7 @@
       scrape_configs = [{
         job_name = "journal";
         journal = {
-          max_age = "12h";
+          max_age = "36h";
           labels = {
             job = "systemd-journal";
             host = "${config.networking.hostName}";
