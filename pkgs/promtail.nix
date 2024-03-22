@@ -13,9 +13,6 @@
       };
       clients = [{
         url = "https://loki.local.garulf.online/loki/api/v1/push";
-        external_labels = {
-          host = config.networking.hostName;
-        };
       }];
       scrape_configs = [{
         job_name = "journal";
@@ -23,7 +20,7 @@
           max_age = "12h";
           labels = {
             job = "systemd-journal";
-            host = "pihole";
+            host = "${config.networking.hostName}";
           };
         };
         relabel_configs = [{
