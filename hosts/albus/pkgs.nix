@@ -9,6 +9,7 @@
       ../../pkgs/rpiplay.nix
       ../../pkgs/virt.nix
       ../../pkgs/wine.nix
+      ../../pkgs/promtail.nix
     ];
   environment.systemPackages = with pkgs; [
      mdadm
@@ -44,5 +45,6 @@
 
   services.sunshine.enable = true;
   services.rpiplay.enable = true;
+  services.promtail.enable = true;
 }
 
