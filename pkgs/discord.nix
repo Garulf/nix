@@ -1,4 +1,4 @@
-{ pkgs, lib, makeDesktopItem, ...}:
+{ pkgs, lib, ...}:
 
 {
 
