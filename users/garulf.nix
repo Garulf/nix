@@ -29,6 +29,7 @@
       neofetch
       zoxide
       tuba
+      xclip
     ];
   };
 
