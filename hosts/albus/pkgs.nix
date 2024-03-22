@@ -9,8 +9,6 @@
       ../../pkgs/rpiplay.nix
       ../../pkgs/virt.nix
       ../../pkgs/wine.nix
-      ../../pkgs/promtail.nix
-      ../common/base.nix
     ];
   environment.systemPackages = with pkgs; [
      mdadm

@@ -15,6 +15,7 @@ in
       ./pkgs.nix
       ../../users/garulf.nix
       ./firewall.nix
+      ../common/base.nix
     ];
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
