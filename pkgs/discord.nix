@@ -5,11 +5,11 @@
   desktopItems = [
     (makeDesktopItem rec {
       name = "Sonic Robo Blast 2";
-      exec = finalAttrs.pname;
-      icon = finalAttrs.pname;
-      comment = finalAttrs.meta.description;
-      desktopName = name;
-      genericName = name;
+      exec = "test";
+      icon = "test";
+      comment = "test";
+      desktopName = "test";
+      genericName = "test";
       categories = [ "Game" ];
     })
   ];
