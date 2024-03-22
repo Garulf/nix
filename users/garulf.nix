@@ -4,7 +4,7 @@
   imports = [
     ../wm/gnome.nix
     # ../wm/hyprland.nix
-    # ../pkgs/discord.nix
+    ../pkgs/discord.nix
   ];
 
   users.users.garulf = {
@@ -22,7 +22,6 @@
       screen
       tmux
       neovim
-      discord
       obsidian
       remmina
       synology-drive-client
