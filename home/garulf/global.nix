@@ -11,10 +11,10 @@
     ./cli/zsh.nix
   ];
 
-  home = {
-    username = "garulf";
-    homeDirectory = "/home/garulf";
-  };
+  # home = {
+  #   username = "garulf";
+  #   homeDirectory = "/home/garulf";
+  # };
 
   programs.home-manager.enable = true;
 
