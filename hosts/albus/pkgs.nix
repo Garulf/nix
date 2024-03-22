@@ -45,6 +45,5 @@
 
   services.sunshine.enable = true;
   services.rpiplay.enable = true;
-  services.promtail.enable = true;
 }
 
