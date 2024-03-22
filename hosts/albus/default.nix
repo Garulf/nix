@@ -51,12 +51,6 @@ in
     LC_TIME = "en_US.UTF-8";
   };
 
-  services.openssh = {
-    enable = true;
-    settings.PasswordAuthentication = true;
-  };
-
-
   # Enable the X11 windowing system.
   services.xserver.enable = true;
 
@@ -98,11 +92,6 @@ in
   # Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;
 
-  # Allow unfree packages
-  nixpkgs.config.allowUnfree = true;
-
-  programs.zsh.enable = true;
-
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
   # programs.mtr.enable = true;
@@ -122,50 +111,9 @@ in
     driSupport32Bit = true;
   };
 
-  security.polkit.enable = true;
-
-  security.polkit.extraConfig = ''
-    polkit.addRule(function(action, subject) {
-      if (
-        subject.isInGroup("users")
-          && (
-            action.id == "org.freedesktop.login1.reboot" ||
-            action.id == "org.freedesktop.login1.reboot-multiple-sessions" ||
-            action.id == "org.freedesktop.login1.power-off" ||
-            action.id == "org.freedesktop.login1.power-off-multiple-sessions" ||
-            action.id == "org.freedesktop.login1.suspend" ||
-            action.id == "org.freedesktop.login1.suspend-multiple-sessions"
-          )
-        )
-      {
-        return polkit.Result.YES;
-      }
-    })
-  '';
-
-  systemd = {
-    user.services.polkit-gnome-authentication-agent-1 = {
-      description = "polkit-gnome-authentication-agent-1";
-      wantedBy = [ "graphical-session.target" ];
-      wants = [ "graphical-session.target" ];
-      after = [ "graphical-session.target" ];
-      serviceConfig = {
-          Type = "simple";
-          ExecStart = "${pkgs.polkit_gnome}/libexec/polkit-gnome-authentication-agent-1";
-          Restart = "on-failure";
-          RestartSec = 1;
-          TimeoutStopSec = 10;
-        };
-    };
-  };
-
   virtualisation.waydroid.enable = true;
 
   services.flatpak.enable = false;
-
-  fonts.packages = with pkgs; [
-    (nerdfonts.override { fonts = [ "FiraCode" "DroidSansMono" ]; })
-  ];
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions

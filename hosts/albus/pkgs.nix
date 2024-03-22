@@ -10,11 +10,11 @@
       ../../pkgs/virt.nix
       ../../pkgs/wine.nix
       ../../pkgs/promtail.nix
+      ../common/base.nix
     ];
   environment.systemPackages = with pkgs; [
      mdadm
      lm_sensors
-     vim
      steam
      gzdoom
      prismlauncher
