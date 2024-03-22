@@ -24,6 +24,7 @@
      killall
      yuzu-mainline
      gnome.nautilus
+     streamdeck-ui
      (vscode-with-extensions.override {
        vscodeExtensions = with vscode-extensions; [
          bbenoist.nix
