@@ -113,7 +113,7 @@ in
   };
 
   virtualisation.waydroid.enable = true;
-
+  virtualisation.docker.enable = true;
   services.flatpak.enable = false;
 
   # This value determines the NixOS release from which the default
