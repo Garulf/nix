@@ -17,6 +17,7 @@
 
   environment.systemPackages = with pkgs; [
     git
+    x11vnc
     htop
     vim
     neovim
