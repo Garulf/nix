@@ -12,10 +12,6 @@
     ];
 
   environment.systemPackages = with unstable; [
-    hyprlock
-  ];
-
-  environment.systemPackages = with pkgs; [
      mdadm
      lm_sensors
      steam
