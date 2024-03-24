@@ -43,7 +43,6 @@
 
   neovim.override = {
     withPython3 = true;
-    extraPython3Packages = p: with p; [ unicode ... ];
   };
 
   services.xserver.windowManager.dwm.enable = false;
