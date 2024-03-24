@@ -26,6 +26,7 @@
      yuzu-mainline
      gnome.nautilus
      streamdeck-ui
+     brightnessctl
      (vscode-with-extensions.override {
        vscodeExtensions = with vscode-extensions; [
          bbenoist.nix
