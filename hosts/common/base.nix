@@ -65,11 +65,6 @@
         };
     };
   };
-
-  neovim.override {
-    withPython3 = true;
-  };
-
 }
 
 
