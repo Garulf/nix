@@ -17,6 +17,7 @@
      gzdoom
      prismlauncher
      gamemode
+     gamescope
      lutris
      input-remapper
      cage
