@@ -42,10 +42,6 @@
     defaultEditor = true;
   };
 
-  neovim.override = {
-    withPython3 = true;
-  };
-
   services.xserver.windowManager.dwm.enable = false;
   services.xserver.windowManager.i3.enable = false;
 
