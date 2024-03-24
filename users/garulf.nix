@@ -32,6 +32,7 @@
       tuba
       xclip
       starship
+      gcc
     ];
   };
 
