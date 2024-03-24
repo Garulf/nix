@@ -41,6 +41,12 @@
     defaultEditor = true;
   };
 
+  with import <nixpkgs> {};
+  neovim.override {
+    withPython3 = true;
+    extraPython3Packages = p: with p; [ unicode ... ];
+  }
+
   services.xserver.windowManager.dwm.enable = false;
   services.xserver.windowManager.i3.enable = false;
 
