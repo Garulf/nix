@@ -10,6 +10,11 @@
       ../../pkgs/virt.nix
       ../../pkgs/wine.nix
     ];
+
+  environment.systemPackages = with unstable; [
+    hyprlock
+  ]
+
   environment.systemPackages = with pkgs; [
      mdadm
      lm_sensors
