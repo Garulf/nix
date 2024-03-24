@@ -22,6 +22,7 @@
     vim
     neovim
     killall
+    unzip
   ];
 
   fonts.packages = with pkgs; [
