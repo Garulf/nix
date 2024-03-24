@@ -30,6 +30,7 @@
       zoxide
       tuba
       xclip
+      starship
     ];
   };
 
