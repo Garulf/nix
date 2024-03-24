@@ -13,7 +13,7 @@
 
   environment.systemPackages = with unstable; [
     hyprlock
-  ]
+  ];
 
   environment.systemPackages = with pkgs; [
      mdadm
