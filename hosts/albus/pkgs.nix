@@ -1,4 +1,4 @@
-{ config, pkgs, unstable, ... }:
+{ config, pkgs, ... }:
 
 {
   imports =
@@ -11,7 +11,7 @@
       ../../pkgs/wine.nix
     ];
 
-  environment.systemPackages = with unstable; [
+  environment.systemPackages = with pkgs.unstable; [
      mdadm
      lm_sensors
      steam
