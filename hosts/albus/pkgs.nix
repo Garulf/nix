@@ -11,7 +11,7 @@
       ../../pkgs/wine.nix
     ];
 
-  environment.systemPackages = with pkgs.unstable; [
+  environment.systemPackages = with pkgs; [
      mdadm
      lm_sensors
      steam

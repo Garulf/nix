@@ -18,6 +18,9 @@
     dunst
     libnotify
     swww
+    swayidle
+    swaylock
+    swaylock-effects
     rofi-wayland 
     (pkgs.waybar.overrideAttrs (oldAttrs: {
       mesonFlags = oldAttrs.mesonFlags or [] ++ [
