@@ -13,6 +13,7 @@
     extraGroups = [ "networkmanager" "wheel" "libvirtd" "i2c" "power" ];
     shell = pkgs.zsh;
     packages = with pkgs; [
+      python3
       firefox
       cider
       bitwarden
