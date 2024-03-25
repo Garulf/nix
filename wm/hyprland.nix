@@ -19,6 +19,8 @@
     libnotify
     swww
     swayidle
+    unstable.hyprlock
+    unstable.hypridle
     swaylock
     swaylock-effects
     rofi-wayland 
