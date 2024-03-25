@@ -13,12 +13,11 @@
   };
 
   environment.systemPackages = with pkgs; [
-    waybar
+    unstable.waybar
     kitty
     dunst
     libnotify
     swww
-    swayidle
     unstable.hyprlock
     unstable.hypridle
     rofi-wayland 
