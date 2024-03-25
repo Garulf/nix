@@ -23,6 +23,11 @@ in
       outputs.overlays.unstable-packages
     ];
   };
+  
+  
+  environment.systemPackages = with pkgs; [
+    unstable.sunshine
+  ];
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
