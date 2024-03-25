@@ -17,14 +17,14 @@ with lib;
   config = mkIf cfg.enable {
 
     environment.systemPackages = with pkgs; [
-      sunshine
+      unstable.sunshine
     ];
 
     security.wrappers.sunshine = {
       owner = "root";
       group = "root";
       capabilities = "cap_sys_admin+p";
-      source = "${pkgs.sunshine}/bin/sunshine";
+      source = "${pkgs.unstable.sunshine}/bin/sunshine";
     };
 
     systemd.user.services.sunshine = {
