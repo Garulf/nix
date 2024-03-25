@@ -33,6 +33,7 @@
       xclip
       starship
       gcc
+      gh
     ];
   };
 
