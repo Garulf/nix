@@ -2,7 +2,7 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, ... }:
+{ inputs, outputs, lib, config, pkgs, ... }:
 
 let
   monitorsXmlContent = builtins.readFile /home/garulf/.config/monitors.xml;
