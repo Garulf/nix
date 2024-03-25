@@ -17,6 +17,12 @@ in
       ./firewall.nix
       ../common/base.nix
     ];
+  
+  nixpkgs = {
+    overlays = [
+      outputs.overlays.unstable-packages
+    ];
+  };
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
