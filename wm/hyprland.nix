@@ -13,7 +13,7 @@
   };
 
   environment.systemPackages = with pkgs; [
-    waybar
+    unstable.waybar
     kitty
     dunst
     libnotify
