@@ -15,7 +15,7 @@
   environment.systemPackages = with pkgs; [
     waybar
     kitty
-    dunst
+    unstable.dunst
     libnotify
     swww
     swayidle
