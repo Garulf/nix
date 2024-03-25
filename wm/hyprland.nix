@@ -21,8 +21,6 @@
     swayidle
     unstable.hyprlock
     unstable.hypridle
-    swaylock
-    swaylock-effects
     rofi-wayland 
     (pkgs.waybar.overrideAttrs (oldAttrs: {
       mesonFlags = oldAttrs.mesonFlags or [] ++ [
