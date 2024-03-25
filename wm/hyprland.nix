@@ -20,6 +20,10 @@
     swww
     unstable.hyprlock
     unstable.hypridle
+    unstable.hyprshot
+    unstable.slurp
+    unstable.grim
+    unstable.wl-clipboard
     rofi-wayland 
     (pkgs.waybar.overrideAttrs (oldAttrs: {
       mesonFlags = oldAttrs.mesonFlags or [] ++ [
