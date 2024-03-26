@@ -34,6 +34,7 @@
       starship
       gcc
       gh
+      wget
     ];
   };
 
