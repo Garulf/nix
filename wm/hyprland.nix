@@ -18,6 +18,17 @@
     dunst
     libnotify
     swww
+    gnome-keyring
+    gnome-control-center
+    gnome-bluetooth
+    blueberry
+    brightnessctl
+    playerctl
+    networkmanager
+    wlsunset
+    wlogout
+    # nwg-dock-hyprland
+    xdg-desktop-portal-hyprland
     unstable.hyprlock
     unstable.hypridle
     unstable.hyprshot
