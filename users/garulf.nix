@@ -35,6 +35,7 @@
       gcc
       gh
       wget
+      jq
     ];
   };
 
