@@ -19,8 +19,8 @@
     libnotify
     swww
     gnome.gnome-keyring
-    gnome-control-center
-    gnome-bluetooth
+    gnome.gnome-control-center
+    gnome.gnome-bluetooth
     blueberry
     brightnessctl
     playerctl
