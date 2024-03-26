@@ -18,7 +18,7 @@
     dunst
     libnotify
     swww
-    gnome-keyring
+    gnome.gnome-keyring
     gnome-control-center
     gnome-bluetooth
     blueberry
