@@ -5,7 +5,7 @@
   boot.kernelModules = [ "i2c-dev" "i2c-piix4" ];
 
   environment.systemPackages = with pkgs; [
-    openrgb
+    unstable.openrgb
   ];
   systemd.user.services.openrgb = {
     description = "Launches Openrgb on login.";
@@ -13,7 +13,7 @@
     serviceConfig = {
       Restart = "always";
       RestartSec = "5";
-      ExecStart = "${pkgs.openrgb-with-all-plugins}/bin/openrgb --server --startminimized";
+      ExecStart = "${unstable.pkgs.openrgb-with-all-plugins}/bin/openrgb --server --startminimized";
     };
   };
 
