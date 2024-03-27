@@ -13,7 +13,7 @@
     serviceConfig = {
       Restart = "always";
       RestartSec = "5";
-      ExecStart = "${pkgs.openrgb-with-all-plugins}/bin/openrgb --server";
+      ExecStart = "${pkgs.openrgb-with-all-plugins}/bin/openrgb --startminimized --server";
     };
   };
 
