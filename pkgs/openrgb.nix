@@ -27,20 +27,20 @@
     #---------------------------------------------------------------#
     # Asus Aura USB - DetectAsusAuraUSBTerminal
     #---------------------------------------------------------------#
-    SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="0b05", ATTRS{idProduct}=="1889", TAG+="uaccess", TAG+="ASUS_ROG_AURA_Terminal"
+    # SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="0b05", ATTRS{idProduct}=="1889", TAG+="uaccess", TAG+="ASUS_ROG_AURA_Terminal"
     #---------------------------------------------------------------#
     # Asus Aura USB - DetectAsusAuraUSBAddressable
     #---------------------------------------------------------------#
-    SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="0b05", ATTRS{idProduct}=="1867", TAG+="uaccess", TAG+="ASUS_Aura_Addressable"
-    SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="0b05", ATTRS{idProduct}=="1872", TAG+="uaccess", TAG+="ASUS_Aura_Addressable"
-    SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="0b05", ATTRS{idProduct}=="18a3", TAG+="uaccess", TAG+="ASUS_Aura_Addressable"
-    SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="0b05", ATTRS{idProduct}=="18a5", TAG+="uaccess", TAG+="ASUS_Aura_Addressable"
+    # SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="0b05", ATTRS{idProduct}=="1867", TAG+="uaccess", TAG+="ASUS_Aura_Addressable"
+    # SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="0b05", ATTRS{idProduct}=="1872", TAG+="uaccess", TAG+="ASUS_Aura_Addressable"
+    # SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="0b05", ATTRS{idProduct}=="18a3", TAG+="uaccess", TAG+="ASUS_Aura_Addressable"
+    # SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="0b05", ATTRS{idProduct}=="18a5", TAG+="uaccess", TAG+="ASUS_Aura_Addressable"
     #---------------------------------------------------------------#
     # Asus Aura USB - DetectAsusAuraUSBMotherboards
     #---------------------------------------------------------------#
-    SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="0b05", ATTRS{idProduct}=="18f3", TAG+="uaccess", TAG+="ASUS_Aura_Motherboard"
-    SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="0b05", ATTRS{idProduct}=="1939", TAG+="uaccess", TAG+="ASUS_Aura_Motherboard"
-    SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="0b05", ATTRS{idProduct}=="19af", TAG+="uaccess", TAG+="ASUS_Aura_Motherboard"
+    # SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="0b05", ATTRS{idProduct}=="18f3", TAG+="uaccess", TAG+="ASUS_Aura_Motherboard"
+    # SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="0b05", ATTRS{idProduct}=="1939", TAG+="uaccess", TAG+="ASUS_Aura_Motherboard"
+    # SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="0b05", ATTRS{idProduct}=="19af", TAG+="uaccess", TAG+="ASUS_Aura_Motherboard"
     #---------------------------------------------------------------#
     # Corsair Commander Core - DetectCorsairCapellixHIDControllers
     #---------------------------------------------------------------#
