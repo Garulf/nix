@@ -25,6 +25,23 @@
     SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="0b05", ATTRS{idProduct}=="1866", TAG+="uaccess", TAG+="ASUS_Aura_Core"
     SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="0b05", ATTRS{idProduct}=="1869", TAG+="uaccess", TAG+="ASUS_Aura_Core"
     #---------------------------------------------------------------#
+    # Asus Aura USB - DetectAsusAuraUSBTerminal
+    #---------------------------------------------------------------#
+    SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="0b05", ATTRS{idProduct}=="1889", TAG+="uaccess", TAG+="ASUS_ROG_AURA_Terminal"
+    #---------------------------------------------------------------#
+    # Asus Aura USB - DetectAsusAuraUSBAddressable
+    #---------------------------------------------------------------#
+    SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="0b05", ATTRS{idProduct}=="1867", TAG+="uaccess", TAG+="ASUS_Aura_Addressable"
+    SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="0b05", ATTRS{idProduct}=="1872", TAG+="uaccess", TAG+="ASUS_Aura_Addressable"
+    SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="0b05", ATTRS{idProduct}=="18a3", TAG+="uaccess", TAG+="ASUS_Aura_Addressable"
+    SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="0b05", ATTRS{idProduct}=="18a5", TAG+="uaccess", TAG+="ASUS_Aura_Addressable"
+    #---------------------------------------------------------------#
+    # Asus Aura USB - DetectAsusAuraUSBMotherboards
+    #---------------------------------------------------------------#
+    SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="0b05", ATTRS{idProduct}=="18f3", TAG+="uaccess", TAG+="ASUS_Aura_Motherboard"
+    SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="0b05", ATTRS{idProduct}=="1939", TAG+="uaccess", TAG+="ASUS_Aura_Motherboard"
+    SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="0b05", ATTRS{idProduct}=="19af", TAG+="uaccess", TAG+="ASUS_Aura_Motherboard"
+    #---------------------------------------------------------------#
     # Corsair Commander Core - DetectCorsairCapellixHIDControllers
     #---------------------------------------------------------------#
     SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="1b1c", ATTRS{idProduct}=="0c1c", TAG+="uaccess", TAG+="Corsair_Commander_Core"
