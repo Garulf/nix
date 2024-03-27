@@ -17,6 +17,7 @@
       firefox
       cider
       bitwarden
+      bitwarden-cli
       ulauncher
       google-chrome
       vscode
