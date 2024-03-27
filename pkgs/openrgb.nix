@@ -13,7 +13,7 @@
     serviceConfig = {
       Restart = "always";
       RestartSec = "5";
-      ExecStart = "${pkgs.unstable.openrgb-with-all-plugins}/bin/openrgb --noautoconnect --server --startminimized";
+      ExecStart = "${pkgs.unstable.openrgb-with-all-plugins}/bin/openrgb --noautoconnect --server";
     };
   };
 
