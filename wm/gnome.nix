@@ -17,9 +17,9 @@
       # i3status
       i3lock
       i3blocks
-      picom
     ];
   };
+  services.picom.enable = true;
 
   programs.dconf.profiles = {
       # TODO: Investigate customizing gdm greeter.
