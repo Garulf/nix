@@ -14,7 +14,7 @@
     enable = true;
     extraPackages = with pkgs; [
       dmenu
-      i3status
+      # i3status
       i3block
       i3blocks
     ];
