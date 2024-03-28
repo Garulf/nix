@@ -17,6 +17,7 @@
       # i3status
       i3lock
       i3blocks
+      feh
     ];
   };
   services.picom.enable = true;
