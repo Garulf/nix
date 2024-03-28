@@ -7,7 +7,7 @@
   services.xserver.desktopManager.gnome.enable = false;
   services.xserver.displayManager.gdm.wayland = false;
   services.xserver.windowManager.qtile.enable = false; 
-  services.xserver.windowManager.i3.enable = true;
+  # services.xserver.windowManager.i3.enable = true;
   services.xserver.windowManager.i3.package = pkgs.i3-gaps;
   services.xserver.displayManager.defaultSession = "none+i3";
   services.xserver.windowManager.i3 = {
