@@ -18,9 +18,13 @@
       i3lock
       i3blocks
       feh
+      picom
     ];
   };
-  services.picom.enable = true;
+  # services.picom.enable = true;
+  # systemd.user.services.picom.serviceConfig.ExecStart = ''
+  #   ${pkgs.picom}/bin/picom --config /home/garulf/.config/picom/picom.conf
+  # '';
 
   programs.dconf.profiles = {
       # TODO: Investigate customizing gdm greeter.
