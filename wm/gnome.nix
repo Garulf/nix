@@ -19,6 +19,7 @@
       i3blocks
       feh
       picom
+      xborders
     ];
   };
   # services.picom.enable = true;
