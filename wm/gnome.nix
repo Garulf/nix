@@ -6,7 +6,19 @@
   services.xserver.displayManager.gdm.enable = true;
   services.xserver.desktopManager.gnome.enable = false;
   services.xserver.displayManager.gdm.wayland = false;
-  services.xserver.windowManager.qtile.enable = true; 
+  services.xserver.windowManager.qtile.enable = false; 
+  services.xserver.windowManager.i3.enable = true;
+  services.xserver.windowManager.i3.package = pkgs.i3-gaps;
+  services.xserver.displayManager.defaultSession = "none+i3";
+  services.xserver.windowManager.i3 = {
+    enable = true;
+    extraPackages = with pkgs; [
+      dmenu
+      i3status
+      i3block
+      i3blocks
+    ];
+  };
 
   programs.dconf.profiles = {
       # TODO: Investigate customizing gdm greeter.
