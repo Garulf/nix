@@ -37,6 +37,10 @@
       gh
       wget
       jq
+      xcolor
+      feh
+      maim
+      xdotool
     ];
   };
 
