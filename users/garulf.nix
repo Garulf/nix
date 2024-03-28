@@ -41,6 +41,7 @@
       feh
       maim
       xdotool
+      cifs-utils
     ];
   };
 
