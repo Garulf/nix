@@ -20,6 +20,7 @@
       feh
       picom
       xborders
+      xidlehook
     ];
   };
   # services.picom.enable = true;
