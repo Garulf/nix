@@ -11,6 +11,7 @@
       dmenu
       # i3status
       i3lock
+      xss-lock
       i3blocks
       xborders
       xidlehook
