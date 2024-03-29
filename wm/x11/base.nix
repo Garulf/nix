@@ -4,6 +4,7 @@
   environment.systemPackages = with pkgs; [
     gnome.gnome-screenshot
     feh
+    dunst
     picom
   ];
 
