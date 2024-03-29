@@ -48,6 +48,7 @@
       cifs-utils
       rofi
       fzf
+      xxh
     ];
   };
 
