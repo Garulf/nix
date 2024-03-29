@@ -3,9 +3,12 @@
 {
   imports = [
     ../wm/gnome.nix
+    ../wm/i3wm.nixW
     # ../wm/hyprland.nix
     ../pkgs/discord.nix
   ];
+
+  services.xserver.displayManager.defaultSession = "none+i3";
 
   users.users.garulf = {
     isNormalUser = true;

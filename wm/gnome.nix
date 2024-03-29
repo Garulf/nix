@@ -1,6 +1,9 @@
 { pkgs, lib, ...}:
 
 {
+  imports = [
+    ./x11.nix
+  ];
 
   # Enable the GNOME Desktop Environment.
   services.xserver.displayManager.gdm.enable = true;
@@ -9,20 +12,8 @@
   services.xserver.windowManager.qtile.enable = false; 
   # services.xserver.windowManager.i3.enable = true;
   # services.xserver.windowManager.i3.package = pkgs.i3-gaps;
-  services.xserver.displayManager.defaultSession = "none+i3";
-  services.xserver.windowManager.i3 = {
-    enable = true;
-    extraPackages = with pkgs; [
-      dmenu
-      # i3status
-      i3lock
-      i3blocks
-      feh
-      picom
-      xborders
-      xidlehook
-    ];
-  };
+  # services.xserver.displayManager.defaultSession = "none+i3";
+
   # services.picom.enable = true;
   # systemd.user.services.picom.serviceConfig.ExecStart = ''
   #   ${pkgs.picom}/bin/picom --config /home/garulf/.config/picom/picom.conf
