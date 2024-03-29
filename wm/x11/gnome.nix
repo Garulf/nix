@@ -5,19 +5,7 @@
     ./base.nix
   ];
 
-  # Enable the GNOME Desktop Environment.
-  services.xserver.displayManager.gdm.enable = true;
   services.xserver.desktopManager.gnome.enable = true;
-  services.xserver.displayManager.gdm.wayland = false;
-  services.xserver.windowManager.qtile.enable = false; 
-  # services.xserver.windowManager.i3.enable = true;
-  # services.xserver.windowManager.i3.package = pkgs.i3-gaps;
-  # services.xserver.displayManager.defaultSession = "none+i3";
-
-  # services.picom.enable = true;
-  # systemd.user.services.picom.serviceConfig.ExecStart = ''
-  #   ${pkgs.picom}/bin/picom --config /home/garulf/.config/picom/picom.conf
-  # '';
 
   programs.dconf.profiles = {
       # TODO: Investigate customizing gdm greeter.
