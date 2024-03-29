@@ -2,7 +2,7 @@
 
 {
   imports = [
-    .
+    ./base.nix
   ];
 
   # Enable the GNOME Desktop Environment.
