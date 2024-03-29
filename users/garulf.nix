@@ -49,6 +49,7 @@
       rofi
       fzf
       xxh
+      trash-cli
     ];
   };
 
