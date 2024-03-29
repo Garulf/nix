@@ -10,6 +10,15 @@ let
   monitorsConfig = pkgs.writeText "gdm_monitors.xml" monitorsXmlContent;
 in
 {
+  imports =
+    [ # Include the results of the hardware scan.
+      ./hardware-configuration.nix
+      ./pkgs.nix
+      ../../users/garulf.nix
+      ./firewall.nix
+      ../common/base.nix
+    ];
+  
   nixpkgs = {
     overlays = [
       outputs.overlays.unstable-packages
