@@ -50,6 +50,7 @@
       fzf
       xxh
       trash-cli
+      libnotify
     ];
   };
 
