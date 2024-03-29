@@ -26,7 +26,7 @@
       albus = nixpkgs.lib.nixosSystem {
         specialArgs = {inherit inputs outputs;};
         # > Our main nixos configuration file <
-        modules = [./hosts/albus/default.nix];
+        modules = [./hosts/albus];
       };
     };
 
