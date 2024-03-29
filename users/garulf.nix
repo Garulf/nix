@@ -47,6 +47,7 @@
       xdotool
       cifs-utils
       rofi
+      fzf
     ];
   };
 
