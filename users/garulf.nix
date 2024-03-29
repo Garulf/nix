@@ -2,8 +2,8 @@
 
 {
   imports = [
-    ../wm/gnome.nix
-    ../wm/i3wm.nix
+    ../wm/x11/gnome.nix
+    ../wm/x11/i3wm.nix
     # ../wm/hyprland.nix
     ../pkgs/discord.nix
   ];
@@ -45,6 +45,7 @@
       maim
       xdotool
       cifs-utils
+      rofi
     ];
   };
 
