@@ -44,6 +44,8 @@ in
      playerctl
      obs-studio
      minecraft
+     openjdk8[_headless]
+     openjdk17[_headless]
      (vscode-with-extensions.override {
        vscodeExtensions = with vscode-extensions; [
          bbenoist.nix
