@@ -46,6 +46,7 @@ in
      minecraft
      jdk17_headless
      jdk8_headless
+     pactl
      (vscode-with-extensions.override {
        vscodeExtensions = with vscode-extensions; [
          bbenoist.nix
