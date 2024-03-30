@@ -43,7 +43,7 @@ in
      streamdeck-ui
      playerctl
      obs-studio
-     minecraft-launcher
+     minecraft
      (vscode-with-extensions.override {
        vscodeExtensions = with vscode-extensions; [
          bbenoist.nix
