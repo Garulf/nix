@@ -14,6 +14,7 @@
   ];
   networking.firewall.allowedUDPPortRanges = [ 
     { from = 47998; to = 48000; } # Sunshine
+    { from = 60000; to = 61000; } # Mosh
   ];
 
 }
