@@ -13,6 +13,7 @@
       i3lock
       xss-lock
       i3blocks
+      polybar
       xborders
       xidlehook
     ];
