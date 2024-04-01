@@ -17,7 +17,7 @@
     extraGroups = [ "networkmanager" "wheel" "libvirtd" "i2c" "power" ];
     shell = pkgs.zsh;
     packages = with pkgs; [
-      pkill
+      procps
       python3
       firefox
       cider
