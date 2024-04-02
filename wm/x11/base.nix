@@ -6,6 +6,7 @@
     feh
     dunst
     picom
+    gnome.adwaita-icon-theme
   ];
 
   # services.picom.enable = true;
