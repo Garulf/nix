@@ -53,6 +53,7 @@
       trash-cli
       libnotify
       mpv
+      yt-dlp
     ];
   };
 
