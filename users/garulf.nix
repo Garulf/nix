@@ -52,6 +52,7 @@
       xxh
       trash-cli
       libnotify
+      mpv
     ];
   };
 
@@ -66,4 +67,11 @@
     "electron-25.9.0" # for obsidian
   ];
 
+  nixpkgs.overlays = [
+    (self: super: {
+      mpv = super.mpv.override {
+        scripts = [ self.mpvScripts.mpris ];
+      };
+    })
+  ];
 }
