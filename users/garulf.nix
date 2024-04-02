@@ -52,7 +52,6 @@
       xxh
       trash-cli
       libnotify
-      mpv
       yt-dlp
     ];
   };
@@ -66,13 +65,5 @@
 
   nixpkgs.config.permittedInsecurePackages = [
     "electron-25.9.0" # for obsidian
-  ];
-
-  nixpkgs.overlays = [
-    (self: super: {
-      mpv = super.mpv.override {
-        scripts = [ self.mpvScripts.mpris ];
-      };
-    })
   ];
 }

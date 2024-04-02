@@ -9,6 +9,7 @@
       ../../pkgs/rpiplay.nix
       ../../pkgs/virt.nix
       ../../pkgs/wine.nix
+      ../../pkgs/mpv.nix
     ];
 }
 
