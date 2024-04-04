@@ -53,6 +53,7 @@
       trash-cli
       libnotify
       yt-dlp
+      pocket-casts
     ];
   };
 
