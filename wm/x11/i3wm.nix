@@ -16,6 +16,7 @@
       polybar
       xborders
       xidlehook
+      imagemagick
     ];
   };
 }
