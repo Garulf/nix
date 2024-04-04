@@ -13,7 +13,7 @@
       i3lock
       xss-lock
       i3blocks
-      i3lock-fancy-unstable
+      i3lock-fancy
       polybar
       xborders
       xidlehook
