@@ -25,6 +25,7 @@
         ${pkgs.openrgb}/bin/openrgb -c ffffff
       fi
     '';
+
   services.udev.extraRules = ''
     #---------------------------------------------------------------#
     # Asus AURA Core - DetectAsusAuraCoreControllers
