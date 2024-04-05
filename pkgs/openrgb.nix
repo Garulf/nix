@@ -13,7 +13,7 @@
     serviceConfig = {
       Restart = "always";
       RestartSec = "5";
-      ExecStart = "${pkgs.openrgb-with-all-plugins}/bin/openrgb --server -p ~/.config/OpenRGB/default.orp";
+      ExecStart = "${pkgs.openrgb-with-all-plugins}/bin/openrgb --server -p /home/garulf/.config/OpenRGB/default.orp";
     };
   };
 
