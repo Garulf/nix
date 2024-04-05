@@ -26,7 +26,14 @@
   ];
 
   fonts.packages = with pkgs; [
-    (nerdfonts.override { fonts = [ "FiraCode" "DroidSansMono" "Iosevka" ]; })
+    (nerdfonts.override { 
+      fonts = [ 
+        "FiraCode" 
+        "DroidSansMono" 
+        "Iosevka"
+        "JetBrainsMono"
+      ]; 
+    })
   ];
 
   security.polkit.enable = true;
