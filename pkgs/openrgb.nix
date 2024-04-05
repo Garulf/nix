@@ -13,10 +13,18 @@
     serviceConfig = {
       Restart = "always";
       RestartSec = "5";
-      ExecStart = "${pkgs.openrgb-with-all-plugins}/bin/openrgb --startminimized --server";
+      ExecStart = "${pkgs.openrgb-with-all-plugins}/bin/openrgb --server";
     };
   };
 
+  environment.etc."systemd/system-sleep/openrgb.sh".source =
+    pkgs.writeShellScript "openrgb.sh" ''
+      if [ "$1" = "pre" ]; then
+        ${pkgs.openrgb}/bin/openrgb -c 000000
+      elif [ "$1" = "post" ]; then
+        ${pkgs.openrgb}/bin/openrgb -c ffffff
+      fi
+    '';
   services.udev.extraRules = ''
     #---------------------------------------------------------------#
     # Asus AURA Core - DetectAsusAuraCoreControllers
