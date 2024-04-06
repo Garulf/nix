@@ -17,25 +17,15 @@ with lib;
   config = mkIf cfg.enable {
 
     environment.systemPackages = with pkgs; [
-      sunshine
+      unstable.sunshine
     ];
 
-    # security.wrappers.sunshine = {
-    #   owner = "root";
-    #   group = "root";
-    #   capabilities = "cap_sys_admin+p";
-    #   source = "${pkgs.unstable.sunshine}/bin/sunshine";
-    # };
-
-    # systemd.user.services.sunshine = {
-    #   description = "Sunshine is a Game stream host for Moonlight.";
-    #   wantedBy = [ "graphical-session.target" ];
-    #   serviceConfig = {
-    #     Restart = "always";
-    #     RestartSec = "5";
-    #     ExecStart = "${config.security.wrapperDir}/sunshine";
-    #   };
-    # };
+    security.wrappers.sunshine = {
+      owner = "root";
+      group = "root";
+      capabilities = "cap_sys_admin+p";
+      source = "${pkgs.unstable.sunshine}/bin/sunshine";
+    };
 
     systemd.user.services.sunshine = {
       description = "Sunshine is a Game stream host for Moonlight.";
@@ -43,7 +33,7 @@ with lib;
       serviceConfig = {
         Restart = "always";
         RestartSec = "5";
-        ExecStart = "${pkgs.sunshine}/bin/sunshine";
+        ExecStart = "${config.security.wrapperDir}/sunshine";
       };
     };
 
