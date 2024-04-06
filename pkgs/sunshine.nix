@@ -17,7 +17,7 @@ with lib;
   config = mkIf cfg.enable {
 
     environment.systemPackages = with pkgs; [
-      unstable.sunshine
+      sunshine
     ];
 
     # security.wrappers.sunshine = {
@@ -43,7 +43,7 @@ with lib;
       serviceConfig = {
         Restart = "always";
         RestartSec = "5";
-        ExecStart = "${pkgs.unstable.sunshine}/bin/sunshine";
+        ExecStart = "${pkgs.sunshine}/bin/sunshine";
       };
     };
 
