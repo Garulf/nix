@@ -55,6 +55,7 @@
       libnotify
       yt-dlp
       pocket-casts
+      vlc
     ];
   };
 
