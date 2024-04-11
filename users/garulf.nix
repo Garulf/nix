@@ -56,6 +56,7 @@
       yt-dlp
       pocket-casts
       vlc
+      gallery-dl
     ];
   };
 
