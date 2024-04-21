@@ -50,26 +50,26 @@
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
   hardware.cpu.amd.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
 
-  services.xserver.deviceSection = ''
-    Identifier     "Device0"
-    Driver         "nvidia"
-    VendorName     "NVIDIA Corporation"
-    BoardName      "NVIDIA GeForce RTX 2080 SUPER"
-  '';
-
-  services.xserver.screenSection = ''
-    Identifier     "Screen0"
-    Device         "Device0"
-    Monitor        "Monitor0"
-    DefaultDepth    24
-    Option         "Stereo" "0"
-    Option         "nvidiaXineramaInfoOrder" "DFP-5"
-    Option         "metamodes" "DP-4: nvidia-auto-select +1440+560, DP-0: nvidia-auto-select +0+0 {rotation=left}"
-    Option         "SLI" "Off"
-    Option         "MultiGPU" "Off"
-    Option         "BaseMosaic" "off"
-    SubSection     "Display"
-        Depth       24
-    EndSubSection
-  '';
+  # services.xserver.deviceSection = ''
+  #   Identifier     "Device0"
+  #   Driver         "nvidia"
+  #   VendorName     "NVIDIA Corporation"
+  #   BoardName      "NVIDIA GeForce RTX 2080 SUPER"
+  # '';
+  #
+  # services.xserver.screenSection = ''
+  #   Identifier     "Screen0"
+  #   Device         "Device0"
+  #   Monitor        "Monitor0"
+  #   DefaultDepth    24
+  #   Option         "Stereo" "0"
+  #   Option         "nvidiaXineramaInfoOrder" "DFP-5"
+  #   Option         "metamodes" "DP-4: nvidia-auto-select +1440+560, DP-0: nvidia-auto-select +0+0 {rotation=left}"
+  #   Option         "SLI" "Off"
+  #   Option         "MultiGPU" "Off"
+  #   Option         "BaseMosaic" "off"
+  #   SubSection     "Display"
+  #       Depth       24
+  #   EndSubSection
+  # '';
 }
