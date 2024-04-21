@@ -18,6 +18,7 @@
     shell = pkgs.zsh;
     packages = with pkgs; [
       ranger
+      pavucontrol
       procps
       python3
       firefox
