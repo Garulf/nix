@@ -2,6 +2,9 @@
 
 let
   cfg = config.services.sunshine;
+  sunshineOverride = pkgs.sunshine.overrideAttrs (prev: {
+      runtimeDependencies = prev.runtimeDependencies ++ [ pkgs.libglvnd ];
+  });
 in
 
 with lib;
@@ -16,9 +19,6 @@ with lib;
 
   config = mkIf cfg.enable {
     
-    sunshineOverride = pkgs.sunshine.overrideAttrs (prev: {
-        runtimeDependencies = prev.runtimeDependencies ++ [ pkgs.libglvnd ];
-    });
 
     environment.systemPackages = with pkgs; [
       unstable.sunshine
