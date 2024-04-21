@@ -2,7 +2,7 @@
 
 let
   cfg = config.services.sunshine;
-  sunshineOverride = pkgs.sunshine.overrideAttrs (prev: {
+  sunshineOverride = pkgs.unstable.sunshine.overrideAttrs (prev: {
       runtimeDependencies = prev.runtimeDependencies ++ [ pkgs.libglvnd ];
   });
 in
@@ -21,14 +21,14 @@ with lib;
     
 
     environment.systemPackages = with pkgs; [
-      unstable.sunshine
+      sunshineOverride
     ];
 
     security.wrappers.sunshine = {
       owner = "root";
       group = "root";
       capabilities = "cap_sys_admin+p";
-      source = "${pkgs.unstable.sunshine}/bin/sunshine";
+      source = "${sunshineOverride}/bin/sunshine";
     };
 
     systemd.user.services.sunshine = {
