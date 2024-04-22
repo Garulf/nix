@@ -20,7 +20,7 @@ with lib;
     environment.systemPackages = with pkgs; [
       (unstable.sunshine.override {
         cudaSupport = true;
-       }
+       })
     ];
 
     security.wrappers.sunshine = {
