@@ -24,12 +24,12 @@ with lib;
        })
     ];
 
-    security.wrappers.sunshine = {
-      owner = "root";
-      group = "root";
-      capabilities = "cap_sys_admin+p";
-      source = "${pkgs.unstable.sunshine}/bin/sunshine";
-    };
+    # security.wrappers.sunshine = {
+    #   owner = "root";
+    #   group = "root";
+    #   capabilities = "cap_sys_admin+p";
+    #   source = "${pkgs.unstable.sunshine}/bin/sunshine";
+    # };
 
     systemd.user.services.sunshine = {
       description = "Sunshine is a Game stream host for Moonlight.";
