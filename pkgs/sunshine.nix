@@ -20,6 +20,7 @@ with lib;
     environment.systemPackages = with pkgs; [
       (unstable.sunshine.override {
         cudaSupport = true;
+        stdenv = cudaPackages.backendStdenv;
        })
     ];
 
