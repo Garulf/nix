@@ -2,9 +2,6 @@
 
 let
   cfg = config.services.sunshine;
-  sunshineOverride = pkgs.unstable.sunshine.overrideAttrs (prev: {
-      runtimeDependencies = prev.runtimeDependencies ++ [ pkgs.libglvnd ];
-  });
 in
 
 with lib;
@@ -21,14 +18,16 @@ with lib;
     
 
     environment.systemPackages = with pkgs; [
-      sunshineOverride
+      (unstable.sunshine.override {
+        cudaSupport = true;
+       }
     ];
 
     security.wrappers.sunshine = {
       owner = "root";
       group = "root";
       capabilities = "cap_sys_admin+p";
-      source = "${sunshineOverride}/bin/sunshine";
+      source = "${pkgs.unstable.sunshine}/bin/sunshine";
     };
 
     systemd.user.services.sunshine = {
