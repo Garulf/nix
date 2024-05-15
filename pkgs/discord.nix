@@ -1,6 +1,10 @@
 { pkgs, lib, ...}:
 
 {
+
+  environment.systemPackages = with pkgs; [
+    discord
+  ];
   systemd.user.services.discord = {
     description = "Launches Discord on login.";
     wantedBy = [ "graphical-session.target" ];
