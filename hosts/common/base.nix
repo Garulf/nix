@@ -9,6 +9,7 @@
   services.openssh = {
     enable = true;
     settings.PasswordAuthentication = true;
+    x11Forwarding = true;
   };
 
   nixpkgs.config.allowUnfree = true;
