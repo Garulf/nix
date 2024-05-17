@@ -5,7 +5,7 @@
     ../wm/x11/gnome.nix
     ../wm/x11/i3wm.nix
     # ../wm/hyprland.nix
-    ../pkgs/discord.nix
+    # ../pkgs/discord.nix
   ];
   services.xserver.displayManager.gdm.enable = true;
   services.xserver.displayManager.gdm.wayland = false;
