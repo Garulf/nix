@@ -1,6 +1,9 @@
 { pkgs, lib, ...}:
 
 {
+  # Enable the GNOME desktop environment.
+  programs.dconf.enable = true;
+
   environment.systemPackages = with pkgs; [
     gnome.gnome-screenshot
     feh
