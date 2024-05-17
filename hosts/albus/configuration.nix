@@ -14,6 +14,7 @@ in
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
       ./pkgs.nix
+      ../../pkgs/steam.nix
       ../../users/garulf.nix
       ./firewall.nix
       ../common/base.nix
@@ -29,7 +30,6 @@ in
      nodejs_18
      mdadm
      lm_sensors
-     steam
      gzdoom
      prismlauncher
      gamemode
