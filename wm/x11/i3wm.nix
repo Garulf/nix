@@ -18,6 +18,7 @@
       xborders
       xidlehook
       imagemagick
+      xdg-desktop-portal-gnome
     ];
   };
 }
