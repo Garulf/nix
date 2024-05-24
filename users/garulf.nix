@@ -17,6 +17,7 @@
     extraGroups = [ "networkmanager" "wheel" "libvirtd" "i2c" "power" ];
     shell = pkgs.zsh;
     packages = with pkgs; [
+      pipx
       discord
       ranger
       pavucontrol
