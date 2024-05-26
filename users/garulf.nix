@@ -22,7 +22,7 @@
       ranger
       pavucontrol
       procps
-      python3
+      python3Full
       firefox
       cider
       bitwarden
