@@ -6,11 +6,8 @@
       mpv = super.mpv.override {
         scripts = [ 
           self.mpvScripts.mpris
-          self.mpvScripts.modernx
           self.mpvScripts.sponsorblock
-          self.mpvScripts.quality-menu
-          self.mpvScripts.youtube-upnext
-          self.mpvScripts.mpv-notify-send
+          self.mpvScripts.qualitymenu
         ];
       };
     })
