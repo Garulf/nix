@@ -5,13 +5,13 @@
     (self: super: {
       mpv = super.mpv.override {
         scripts = [ 
-          self.mpvScripts.mpris
-          self.mpvScripts.mpv-osc-modern
-          self.mpvScripts.modernx
-          self.mpvScripts.sponsorblock
-          self.mpvScripts.quality-menu
-          self.mpvScripts.youtube-upnext
-          self.mpvScripts.mpv-notify-send
+          mpvScripts.mpris
+          mpvScripts.mpv-osc-modern
+          mpvScripts.modernx
+          mpvScripts.sponsorblock
+          mpvScripts.quality-menu
+          mpvScripts.youtube-upnext
+          mpvScripts.mpv-notify-send
         ];
       };
     })
