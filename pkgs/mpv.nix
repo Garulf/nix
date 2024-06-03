@@ -7,7 +7,7 @@
         scripts = [ 
           self.mpvScripts.mpris
           self.mpvScripts.sponsorblock
-          self.mpvScripts.qualitymenu
+          self.mpvScripts.quality-menu
         ];
       };
     })
