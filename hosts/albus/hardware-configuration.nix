@@ -12,18 +12,46 @@
 
   boot.initrd.availableKernelModules = [ "nvme" "xhci_pci" "ahci" "usbhid" "usb_storage" "sd_mod" ];
   boot.kernelModules = [ "kvm-amd" "amd_iommu=on" "vfio-pci" ];
-  boot.initrd.kernelModules = [ ];
+  boot.initrd.kernelModules = [ "dm-snapshot" ];
   boot.extraModulePackages = [ ];
 
   fileSystems."/" =
-    { device = "/dev/disk/by-uuid/06295bb5-da42-4852-9a8f-eb9f2656e4d8";
-      fsType = "ext4";
+    { device = "/dev/disk/by-uuid/5fe0438d-a94d-48a3-a7cd-23cee5bb6821";
+      fsType = "btrfs";
+      options = [ "subvol=root" "compress=zstd" "noatime" ];
     };
 
-  fileSystems."/boot" =
-    { device = "/dev/disk/by-uuid/00BA-B843";
-      fsType = "vfat";
-    };
+ fileSystems."/home" =
+   { device = "/dev/disk/by-uuid/5fe0438d-a94d-48a3-a7cd-23cee5bb6821";
+     fsType = "btrfs";
+     options = [ "subvol=home" "compress=zstd" "noatime" ];
+   };
+
+ fileSystems."/nix" =
+   { device = "/dev/disk/by-uuid/5fe0438d-a94d-48a3-a7cd-23cee5bb6821";
+     fsType = "btrfs";
+     options = [ "subvol=nix" "compress=zstd" "noatime" ];
+   };
+
+ fileSystems."/persist" =
+   { device = "/dev/disk/by-uuid/5fe0438d-a94d-48a3-a7cd-23cee5bb6821";
+     fsType = "btrfs";
+     options = [ "subvol=persist" "compress=zstd" "noatime" ];
+     neededForBoot = true;
+   };
+
+ fileSystems."/var/log" =
+   { device = "/dev/disk/by-uuid/5fe0438d-a94d-48a3-a7cd-23cee5bb6821";
+     fsType = "btrfs";
+     options = [ "subvol=log" "compress=zstd" "noatime" ];
+     neededForBoot = true;
+   };
+
+ fileSystems."/boot" =
+   { device = "/dev/disk/by-uuid/3269-C4D5";
+     fsType = "vfat";
+     options = [ "fmask=0022" "dmask=0022" ];
+   };
 
   fileSystems."/mnt/Games" =
     { device = "/dev/nvme1n1p1";
@@ -40,7 +68,7 @@
 
   swapDevices = [
     {
-      device = "/dev/disk/by-uuid/517812dc-1380-4088-905e-0f546209fee0";
+      device = "/dev/disk/by-uuid/101adac7-4264-45fd-bb10-1afd2b3e0f32";
     }
   ];
 
