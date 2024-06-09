@@ -27,7 +27,6 @@ git commit -am "$current"
 version="$(git describe --tags --abbrev=0)"
 nextversion=${version%.*}.$((${version##*.}+1))
 
-echo "Upgrading from $version to $nextversion"
 git tag -a "$nextversion" -m "$current"
 
 # clean up older generations
@@ -36,4 +35,5 @@ git tag -a "$nextversion" -m "$current"
 
 git push --follow-tags
 
+echo "Upgraded from $version to $nextversion"
 echo "Rebuild generation $generation complete!"
