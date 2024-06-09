@@ -4,7 +4,7 @@
   imports = [
     ../wm/x11/gnome.nix
     ../wm/x11/i3wm.nix
-    # ../wm/wayland/hyprland.nix
+    ../wm/wayland/hyprland.nix
     # ../pkgs/discord.nix
   ];
   services.xserver.displayManager.gdm.enable = true;
