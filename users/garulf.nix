@@ -4,12 +4,12 @@
   imports = [
     ../wm/x11/gnome.nix
     ../wm/x11/i3wm.nix
-    ../wm/wayland/hyprland.nix
+    # ../wm/wayland/hyprland.nix
     # ../pkgs/discord.nix
   ];
   services.xserver.displayManager.gdm.enable = true;
   services.xserver.displayManager.gdm.wayland = true;
-  services.xserver.displayManager.defaultSession = "none+i3";
+  services.displayManager.defaultSession = "none+i3";
 
   users.users.garulf = {
     isNormalUser = true;
