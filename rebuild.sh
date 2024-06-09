@@ -24,8 +24,11 @@ generation=$(echo $current | cut -d ' ' -f 1)
 git commit -am "$current"
 
 
+version="$(git describe --tags --abbrev=0)"
+nextversion=${version%.*}.$((${version##*.}+1))
 
-git tag -a "$generation" -m "$current"
+echo "Upgrading from $version to $nextversion"
+git tag -a "$nextversion" -m "$current"
 
 # clean up older generations
 # sudo nix-collect-garbage --delete-older-than 14d
