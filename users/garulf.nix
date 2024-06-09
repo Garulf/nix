@@ -60,6 +60,7 @@
       pocket-casts
       vlc
       gallery-dl
+      pika-backup
     ];
   };
 
