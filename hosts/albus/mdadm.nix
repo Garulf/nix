@@ -4,12 +4,12 @@
     mdadm --run /dev/md0
   '';
 
-  systemd.services.raid-monitor = {
-    description = "Mdadm Raid Monitor";
-    wantedBy = [ "multi-user.target" ];
-    after = [ "postfix.service" ];
-    serviceConfig.ExecStart = "${pkgs.mdadm}/bin/mdadm --assemble --scan";
-  };
+  # systemd.services.raid-monitor = {
+  #   description = "Mdadm Raid Monitor";
+  #   wantedBy = [ "multi-user.target" ];
+  #   after = [ "postfix.service" ];
+  #   serviceConfig.ExecStart = "${pkgs.mdadm}/bin/mdadm --assemble --scan";
+  # };
 
   environment.etc."mdadm.conf".text = ''
     MAILADDR root
