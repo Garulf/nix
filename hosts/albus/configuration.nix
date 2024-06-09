@@ -39,12 +39,10 @@ in
      cage
      weston
      killall
-     yuzu-mainline
      gnome.nautilus
      streamdeck-ui
      playerctl
      obs-studio
-     minecraft
      jdk17_headless
      jdk8_headless
      pulseaudio 
@@ -65,7 +63,7 @@ in
      })
   ];
 
-  services.sunshine.enable = true;
+  # services.sunshine.enable = true;
   services.rpiplay.enable = true;
   
 
