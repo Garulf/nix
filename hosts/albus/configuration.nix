@@ -72,6 +72,12 @@ in
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
+  boot.initrd.luks.devices = {
+    root = {
+      device = "/dev/disk/by-uuid/8977809b-02a7-4d4a-abc3-1233af23414c";
+      preLVM = true;
+    };
+  };
 
   networking.hostName = "albus"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
