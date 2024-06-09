@@ -117,10 +117,8 @@ in
   environment.sessionVariables.NIXOS_OZONE_WL = "1";
 
   # Configure keymap in X11
-  services.xserver = {
-    layout = "us";
-    xkb.Variant = "";
-  };
+  services.xserver.layout = "us";
+  services.xserver.xkb.Variant = "";
 
   # Enable CUPS to print documents.
   services.printing.enable = true;
