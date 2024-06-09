@@ -8,6 +8,7 @@
     dunst
     picom
     gnome.adwaita-icon-theme
+    gnome.gnome-themes-extra
   ];
 
   # services.picom.enable = true;
