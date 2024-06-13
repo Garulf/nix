@@ -21,10 +21,6 @@
       "usbhid"
       "usb_storage"
       "sd_mod"
-      "btusb"
-      "btrtl"
-      "btintel"
-      "bcm203x"
     ];
     systemd.users.root.shell = "/bin/cryptsetup-askpass";
     network = {
