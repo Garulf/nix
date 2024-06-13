@@ -10,7 +10,18 @@
       ../common/nvidia.nix
     ];
 
-  boot.initrd.availableKernelModules = [ "nvme" "xhci_pci" "ahci" "usbhid" "usb_storage" "sd_mod" ];
+  boot.initrd.availableKernelModules = [ 
+    "nvme" 
+    "xhci_pci" 
+    "ahci"
+    "usbhid"
+    "usb_storage"
+    "sd_mod"
+    "btusb"
+    "btrtl"
+    "btintel"
+    "bcm203x"
+  ];
   boot.kernelModules = [ "kvm-amd" "amd_iommu=on" "vfio-pci" ];
   boot.initrd.kernelModules = [ "dm-snapshot" ];
   boot.extraModulePackages = [ ];
