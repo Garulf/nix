@@ -56,6 +56,7 @@
   fileSystems."/mnt/Games" =
     { device = "/dev/nvme1n1p1";
       fsType = "ext4";
+      label = "Games";
       options = ["nodev" "rw" "exec" "nosuid" "nofail" "user" "x-gvfs-show"];
     };
 
