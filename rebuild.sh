@@ -17,16 +17,15 @@ echo "NixOS Rebuilding..."
 # Rebuild, output simplified errors, log trackebacks
 sudo nixos-rebuild switch --flake . --impure 2>&1 | tee nixos-switch.log 
 # exit if there are errors
-cat nixos-switch.log | grep --color error && echo "Switch failed!!!"
+cat nixos-switch.log | grep --color error && echo "Switch failed!!!" && exit 1
 
 
 # Get current generation metadata
 current=$(nixos-rebuild list-generations | grep current)
 generation=$(echo $current | cut -d ' ' -f 1)
 # Commit all changes witih the generation metadata
-git diff --exit-code || (echo "No changes detected!"; false)
 git commit -am "$current"
-# fail if there are no changes
+
 
 version="$(git describe --tags --abbrev=0)"
 nextversion=${version%.*}.$((${version##*.}+1))
