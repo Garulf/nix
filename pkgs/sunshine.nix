@@ -12,7 +12,7 @@ with lib;
 
 {
   options = {
-    services.sunshine = {
+    services.sunshine_custom = {
       enable = mkEnableOption (mdDoc "Sunshine");
     };
 
@@ -48,6 +48,18 @@ with lib;
     services.udev.extraRules = ''
       KERNEL=="uinput", SUBSYSTEM=="misc", OPTIONS+="static_node=uinput", TAG+="uaccess"
     '';
+
+
+    networking.firewall.allowedTCPPorts = [ 
+      47990 # Sunshine admin
+      47984 # Sunshine
+      47989 # Sunshine
+      47990 # Sunshine
+      48010 # Sunshine
+    ];
+    networking.firewall.allowedUDPPortRanges = [ 
+      { from = 47998; to = 48000; } # Sunshine
+    ];
 
   };
 }

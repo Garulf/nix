@@ -18,6 +18,7 @@ in
       ../../users/garulf.nix
       ./firewall.nix
       ../common/base.nix
+      ../../pkgs/sunshine.nix
     ];
   
   nixpkgs = {
@@ -63,7 +64,7 @@ in
      })
   ];
 
-  # services.sunshine.enable = true;
+  services.sunshine_custom.enable = true;
   services.rpiplay.enable = true;
   
 
