@@ -27,7 +27,6 @@
      gnome.nautilus
      streamdeck-ui
      playerctl
-     obs-studio
      pulseaudio
   ];
 
