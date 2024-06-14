@@ -8,7 +8,7 @@
       ../../users/garulf.nix
       ./firewall.nix
       ../common/base.nix
-      ../../pkgs/sunshine.nix
+      ../../services/sunshine.nix
       ../profiles/gaming.nix
     ];
   
