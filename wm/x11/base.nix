@@ -13,6 +13,7 @@
     xclip
     xcolor
     xdotool
+    wmctrl
   ];
 
   # services.picom.enable = true;
