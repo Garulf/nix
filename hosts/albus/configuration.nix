@@ -64,7 +64,6 @@ in
      })
   ];
 
-  services.sunshine_custom.enable = true;
   services.rpiplay.enable = true;
   
 
