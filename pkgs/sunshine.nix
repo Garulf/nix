@@ -12,11 +12,11 @@ with lib;
 {
 
   environment.systemPackages = with pkgs; [
-    sunshineOverride
+    (unstable.sunshine.override { cudaSupport = true; })
   ];
 
   services.sunshine = {
-    package = sunshineOverride;
+    package = (pkgs.unstable.sunshine.override { cudaSupport = true; });
     enable = true;
     autoStart = true;
     capSysAdmin = true;
