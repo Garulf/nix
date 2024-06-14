@@ -9,6 +9,7 @@
     picom
     gnome.adwaita-icon-theme
     gnome.gnome-themes-extra
+    arandr
   ];
 
   # services.picom.enable = true;

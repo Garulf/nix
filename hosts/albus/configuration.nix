@@ -1,20 +1,15 @@
-
-# Edit this configuration file to define what should be installed on
-# your system.  Help is available in the configuration.nix(5) man page
-# and in the NixOS manual (accessible by running ‘nixos-help’).
-
 { inputs, outputs, lib, config, pkgs, ... }:
 
 {
   imports =
-    [ # Include the results of the hardware scan.
+    [ 
       ./hardware-configuration.nix
       ./pkgs.nix
-      ../../pkgs/steam.nix
       ../../users/garulf.nix
       ./firewall.nix
       ../common/base.nix
       ../../pkgs/sunshine.nix
+      ../profiles/gaming.nix
     ];
   
   nixpkgs = {
@@ -24,27 +19,16 @@
   };
 
   environment.systemPackages = with pkgs; [
-     arandr
-     nodejs_18
      mdadm
      lm_sensors
-     gzdoom
-     prismlauncher
-     gamemode
-     gamescope
-     lutris
      input-remapper
      cage
      weston
-     killall
      gnome.nautilus
      streamdeck-ui
      playerctl
      obs-studio
-     jdk17_headless
-     jdk8_headless
      pulseaudio
-     vscode
   ];
 
   services.rpiplay.enable = true;
@@ -155,6 +139,7 @@
   services.flatpak.enable = false;
   
   programs.mosh.enable = true;
+
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
   # on your system were taken. It‘s perfectly fine and recommended to leave
