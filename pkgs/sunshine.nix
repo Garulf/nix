@@ -1,7 +1,7 @@
 { config, pkgs, lib, ...}:
 
 let
-  sunshineOverride = pkgs.unstable.sunshine.override {
+  sunshineOverride = pkgs.sunshine.override {
     cudaSupport = true;
     stdenv = pkgs.cudaPackages.backendStdenv;
   };
@@ -10,6 +10,11 @@ in
 with lib;
 
 {
+
+  environment.systemPackages = with pkgs; [
+    sunshineOverride
+  ];
+
   services.sunshine = {
     package = sunshineOverride;
     enable = true;
