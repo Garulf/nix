@@ -14,10 +14,17 @@
 
 echo "NixOS Rebuilding..."
 
+start_gen="$(nixos-rebuild list-generations | grep current | cut -d ' ' -f 1)"
 # Rebuild, output simplified errors, log trackebacks
 sudo nixos-rebuild switch --flake . --impure 2>&1 | tee nixos-switch.log 
 # exit if there are errors
-cat nixos-switch.log | grep --color error && echo "Switch failed!!!" && exit 1
+
+end_gen="$(nixos-rebuild list-generations | grep current | cut -d ' ' -f 1)"
+
+if [ $start_gen -eq $end_gen ]; then
+    echo "Rebuild failed!"
+    exit 1
+fi
 
 
 # Get current generation metadata
