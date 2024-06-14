@@ -5,10 +5,6 @@
 
 { inputs, outputs, lib, config, pkgs, ... }:
 
-let
-  monitorsXmlContent = builtins.readFile /home/garulf/.config/monitors.xml;
-  monitorsConfig = pkgs.writeText "gdm_monitors.xml" monitorsXmlContent;
-in
 {
   imports =
     [ # Include the results of the hardware scan.
@@ -166,9 +162,4 @@ in
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "24.05"; # Did you read the comment? 
-  
-  systemd.tmpfiles.rules = [
-    "L+ /run/gdm/.config/monitors.xml - - - - ${monitorsConfig}"
-  ];
-
 }
