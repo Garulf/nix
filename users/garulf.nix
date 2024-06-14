@@ -41,16 +41,13 @@
       neofetch
       zoxide
       tuba
-      xclip
       starship
       gcc
       gh
       wget
       jq
-      xcolor
       feh
       maim
-      xdotool
       cifs-utils
       rofi
       fzf

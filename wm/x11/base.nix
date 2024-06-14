@@ -10,6 +10,9 @@
     gnome.adwaita-icon-theme
     gnome.gnome-themes-extra
     arandr
+    xclip
+    xcolor
+    xdotool
   ];
 
   # services.picom.enable = true;
