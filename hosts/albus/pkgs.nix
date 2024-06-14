@@ -5,7 +5,7 @@
     [
       ../../pkgs/steam.nix
       ../../pkgs/openrgb.nix
-      ../../pkgs/rpiplay.nix
+      ../../services/rpiplay.nix
       ../../pkgs/virt.nix
       ../../pkgs/wine.nix
       ../../pkgs/mpv.nix

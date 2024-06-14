@@ -4,7 +4,7 @@
   imports =
     [ 
       ../../pkgs/steam.nix
-      ../../services/prismlauncher.nix
+      ../../pkgs/prismlauncher.nix
     ];
   
   nixpkgs = {

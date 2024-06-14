@@ -5,6 +5,7 @@
     ../wm/x11/gnome.nix
     ../wm/x11/i3wm.nix
     ../wm/wayland/hyprland.nix
+    ../pkgs/neovim.nix
     # ../pkgs/discord.nix
   ];
   services.xserver.displayManager.gdm.enable = true;
@@ -34,7 +35,6 @@
       screen
       tmux
       kitty
-      neovim
       obsidian
       remmina
       synology-drive-client
