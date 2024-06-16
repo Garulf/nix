@@ -18,6 +18,7 @@
     extraGroups = [ "networkmanager" "wheel" "libvirtd" "i2c" "power" ];
     shell = pkgs.zsh;
     packages = with pkgs; [
+      helvum
       eww
       killall
       pipx
