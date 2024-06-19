@@ -9,6 +9,7 @@
           mpvScripts.sponsorblock
           mpvScripts.quality-menu
           mpvScripts.modernx
+          mpvScripts.quality-menu
         ];
       }
     )
