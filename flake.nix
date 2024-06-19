@@ -9,12 +9,17 @@
     # Home manager
     home-manager.url = "github:nix-community/home-manager/release-23.11";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
+
+    aagl.url = "github:ezKEa/aagl-gtk-on-nix/release-24.05";
+    aagl.inputs.nixpkgs.follows = "nixpkgs";
+
   };
 
   outputs = {
     self,
     nixpkgs,
     home-manager,
+    aagl,
     ...
   } @ inputs: let
     inherit (self) outputs;
@@ -26,7 +31,13 @@
       albus = nixpkgs.lib.nixosSystem {
         specialArgs = {inherit inputs outputs;};
         # > Our main nixos configuration file <
-        modules = [./hosts/albus/configuration.nix];
+        modules = [
+          {
+            imports = [ aagl.nixosModules.default ];
+            nix.settings = aagl.nixConfig;
+          }
+          ./hosts/albus/configuration.nix
+        ];
       };
     };
 
