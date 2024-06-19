@@ -8,6 +8,7 @@
           mpvScripts.mpris
           mpvScripts.sponsorblock
           mpvScripts.quality-menu
+          mpvScripts.modernx
         ];
       }
     )
