@@ -14,11 +14,12 @@
     xcolor
     xdotool
     wmctrl
+    xdg-desktop-portal-gtk
   ];
 
   # services.picom.enable = true;
   # systemd.user.services.picom.serviceConfig.ExecStart = ''
   #   ${pkgs.picom}/bin/picom --config /home/garulf/.config/picom/picom.conf
   # '';
-
+  
 }
