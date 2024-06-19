@@ -20,4 +20,6 @@
      lutris
      obs-studio
   ];
+
+  programs.gamemode.enable = true;
 }
