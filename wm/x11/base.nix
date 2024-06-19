@@ -15,6 +15,9 @@
     xdotool
     wmctrl
     xdg-desktop-portal-gtk
+    xorg.xrandr
+    xorg.xset
+    xorg.xkill
   ];
 
   # services.picom.enable = true;
