@@ -19,6 +19,7 @@
       xidlehook
       imagemagick
       xdg-desktop-portal-gnome
+      i3wsr
     ];
   };
 }
