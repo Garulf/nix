@@ -19,7 +19,8 @@
       xidlehook
       imagemagick
       xdg-desktop-portal-gnome
-      i3wsr
+      i3altlayout
+      i3-wk-switch
     ];
   };
 }
