@@ -7,7 +7,6 @@
 
   services.xserver.windowManager.i3 = {
     enable = true;
-    package = pkgs.i3-rounded;
     extraPackages = with pkgs; [
       dmenu
       # i3status
