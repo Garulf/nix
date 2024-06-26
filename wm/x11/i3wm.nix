@@ -14,7 +14,6 @@
       xss-lock
       i3blocks
       i3lock-fancy
-      polybar
       xborders
       xidlehook
       imagemagick
