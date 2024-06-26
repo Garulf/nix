@@ -8,9 +8,17 @@
     ../pkgs/neovim.nix
     # ../pkgs/discord.nix
   ];
-  services.xserver.displayManager.gdm.enable = true;
-  services.xserver.displayManager.gdm.wayland = true;
   services.displayManager.defaultSession = "none+i3";
+
+  services.xserver.displayManager = {
+    gdm = {
+      enable = true;
+      wayland = false;
+    };
+    setupCommands = ''
+      bash -c "/home/garulf/.screenlayout/default.sh"
+    '';
+  };
 
   users.users.garulf = {
     isNormalUser = true;
