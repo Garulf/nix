@@ -6,7 +6,7 @@
     dex
     feh
     dunst
-    picom
+    picom-pijulius
     gnome.adwaita-icon-theme
     gnome.gnome-themes-extra
     arandr
