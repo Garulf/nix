@@ -37,6 +37,7 @@
       python3Full
       firefox
       cider
+      qutebrowser
       bitwarden
       bitwarden-cli
       ulauncher
