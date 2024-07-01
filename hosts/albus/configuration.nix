@@ -28,6 +28,7 @@
      streamdeck-ui
      playerctl
      pulseaudio
+     usb-reset
   ];
 
   services.rpiplay.enable = true;
