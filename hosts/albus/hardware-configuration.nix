@@ -93,6 +93,17 @@
     }
   ];
 
+
+  environment.etc."systemd/system-sleep/reset-keyboard.sh".source =
+    pkgs.writeShellScript "reset-keyboard.sh" ''
+      if [ "$1" = "pre" ]; then
+        echo ""
+      elif [ "$1" = "post" ]; then
+        ${pkgs.usb-reset}/bin/usb-reset 0245:7276
+      fi
+    '';
+
+
   # Enables DHCP on each ethernet and wireless interface. In case of scripted networking
   # (the default) this is the recommended approach. When using systemd-networkd it's
   # still possible to use this option, but it's recommended to use it in conjunction
