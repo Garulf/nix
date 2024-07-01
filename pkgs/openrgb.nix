@@ -25,7 +25,7 @@
       if [ "$1" = "pre" ]; then
         ${pkgs.openrgb}/bin/openrgb -c 000000
       elif [ "$1" = "post" ]; then
-        ${pkgs.openrgb}/bin/openrgb -c ffffff
+        echo ""
       fi
     '';
 
