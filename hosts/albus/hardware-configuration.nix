@@ -113,5 +113,5 @@
 
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
   hardware.cpu.amd.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
-  hardware.ckb-next.enable = true;
+  hardware.ckb-next.enable = false;
 }
