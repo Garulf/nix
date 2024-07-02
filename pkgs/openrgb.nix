@@ -29,6 +29,10 @@
       fi
     '';
 
+  services.udev.extraRules = ''
+    SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="1b1c", ATTRS{idProduct}=="1bc5", TAG+="uaccess", TAG+="Corsair_K100"
+  '';
+
   # services.udev.extraRules = ''
   #   #---------------------------------------------------------------#
   #   # Asus AURA Core - DetectAsusAuraCoreControllers
