@@ -5,7 +5,7 @@
   boot.kernelModules = [ "i2c-dev" "i2c-piix4" ];
 
   environment.systemPackages = with pkgs; [
-    openrgb
+    openrgb-with-all-plugins
   ];
 
   services.udev.packages = [ pkgs.openrgb ];
@@ -23,7 +23,7 @@
   environment.etc."systemd/system-sleep/openrgb.sh".source =
     pkgs.writeShellScript "openrgb.sh" ''
       if [ "$1" = "pre" ]; then
-        ${pkgs.openrgb}/bin/openrgb -c 000000
+        ${pkgs.openrgb-with-all-plugins}/bin/openrgb -c 000000
       elif [ "$1" = "post" ]; then
         echo ""
       fi
