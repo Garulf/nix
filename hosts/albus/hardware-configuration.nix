@@ -99,7 +99,7 @@
       if [ "$1" = "pre" ]; then
         echo ""
       elif [ "$1" = "post" ]; then
-        sleep 5; ${pkgs.usb-reset}/bin/usb-reset 0245:7276
+        sleep 1; ${pkgs.usb-reset}/bin/usb-reset 1b1c:1bc5 
       fi
     '';
 
