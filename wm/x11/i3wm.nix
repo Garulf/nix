@@ -19,9 +19,14 @@
       xborders
       xidlehook
       imagemagick
-      xdg-desktop-portal-gnome
       i3altlayout
       i3-wk-switch
     ];
   };
+
+
+  xdg.portal.enable = true;
+  xdg.portal.extraPortals = [
+    pkgs.xdg-desktop-portal-gnome
+  ];
 }
