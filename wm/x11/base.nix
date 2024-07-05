@@ -19,6 +19,10 @@
     xorg.xset
     xorg.xkill
   ];
+  
+  services.xserver = {
+    desktopManager.wallpaper.combineScreens = true;
+  };
 
   # services.picom.enable = true;
   # systemd.user.services.picom.serviceConfig.ExecStart = ''
