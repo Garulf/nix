@@ -21,7 +21,10 @@
   ];
   
   services.xserver = {
-    desktopManager.wallpaper.combineScreens = true;
+    desktopManager.wallpaper = {
+      combineScreens = true;
+      mode = "fill";
+    };
   };
 
   # services.picom.enable = true;
