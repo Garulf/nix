@@ -28,6 +28,7 @@
      streamdeck-ui
      playerctl
      pulseaudio
+     vlock
   ];
 
   services.rpiplay.enable = true;
