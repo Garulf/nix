@@ -6,7 +6,7 @@
 {
   imports =
     [ (modulesPath + "/installer/scan/not-detected.nix")
-      ./mdadm.nix
+      # ./mdadm.nix
       ../common/nvidia.nix
     ];
   boot.loader.systemd-boot.configurationLimit = 3;
@@ -93,6 +93,7 @@
     }
   ];
 
+  boot.swraid.enable = true;
 
   environment.etc."systemd/system-sleep/reset-keyboard.sh".source =
     pkgs.writeShellScript "reset-keyboard.sh" ''
