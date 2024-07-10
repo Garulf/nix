@@ -20,6 +20,7 @@
 
   environment.systemPackages = with pkgs; [
      mdadm
+     cmatrix
      lm_sensors
      input-remapper
      cage
