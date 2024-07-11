@@ -26,6 +26,7 @@
     extraGroups = [ "networkmanager" "wheel" "libvirtd" "i2c" "power" ];
     shell = pkgs.zsh;
     packages = with pkgs; [
+      entr
       mpris-notifier
       helvum
       eww
