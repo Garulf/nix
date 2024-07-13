@@ -73,6 +73,7 @@
       gallery-dl
       pika-backup
       github-desktop
+      plex-media-player
     ];
   };
 
