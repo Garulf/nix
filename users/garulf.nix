@@ -74,8 +74,12 @@
       pika-backup
       github-desktop
       jqp
+      libimobiledevice
+      ifuse
     ];
   };
+  
+  services.usbmuxd.enable = true;
 
   programs.zsh.enable = true;
 
@@ -84,7 +88,4 @@
     defaultEditor = true;
   };
 
-  nixpkgs.config.permittedInsecurePackages = [
-    "electron-25.9.0" # for obsidian
-  ];
 }
