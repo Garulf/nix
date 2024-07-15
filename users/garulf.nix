@@ -32,7 +32,6 @@
       eww
       killall
       pipx
-      discord
       ranger
       pavucontrol
       procps
@@ -76,7 +75,6 @@
       jqp
       libimobiledevice
       ifuse
-      discocss
     ];
   };
   
