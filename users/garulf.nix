@@ -32,6 +32,7 @@
       eww
       killall
       pipx
+      discord
       ranger
       pavucontrol
       procps
