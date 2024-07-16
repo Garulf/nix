@@ -13,7 +13,7 @@
   services.xserver.displayManager = {
     gdm = {
       enable = true;
-      wayland = false;
+      wayland = true;
     };
     setupCommands = ''
       bash -c "/home/garulf/.screenlayout/default.sh"
