@@ -77,6 +77,7 @@
       libimobiledevice
       ifuse
       stow
+      xwinwrap
     ];
   };
   
