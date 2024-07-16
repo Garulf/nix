@@ -78,6 +78,7 @@
       ifuse
       stow
       xwinwrap
+      komorebi
     ];
   };
   
