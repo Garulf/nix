@@ -76,6 +76,7 @@
       jqp
       libimobiledevice
       ifuse
+      stow
     ];
   };
   
