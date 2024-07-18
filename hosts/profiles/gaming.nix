@@ -23,7 +23,7 @@
 
   programs.gamescope = {
     enable = true;
-    capSysNice = true;
-    package = pkgs.gamescope;
+    capSysNice = false;
+    package = pkgs.unstable.gamescope;
   };
 }
