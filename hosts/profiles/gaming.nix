@@ -15,11 +15,14 @@
 
   environment.systemPackages = with pkgs; [
      gzdoom
-     gamemode
-     gamescope
      lutris
      obs-studio
   ];
 
   programs.gamemode.enable = true;
+
+  programs.gamescope = {
+    enable = true;
+    package = pkgs.unstable.gamescope;
+  };
 }
