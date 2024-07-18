@@ -24,6 +24,6 @@
   programs.gamescope = {
     enable = true;
     capSysNice = true;
-    package = pkgs.unstable.gamescope;
+    package = pkgs.gamescope;
   };
 }
