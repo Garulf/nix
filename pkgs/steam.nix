@@ -1,11 +1,8 @@
 { pkgs, lib, ...}:
 
 {
-  environment.systemPackages = with pkgs; [
-    steam
-  ];
-
   programs.steam = {
+    package = pkgs.unstable.steam;
     remotePlay.openFirewall = true;
     dedicatedServer.openFirewall =true;
   };
