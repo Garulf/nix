@@ -3,7 +3,7 @@
 {
   environment.systemPackages = with pkgs; [
     (
-      mpv.override {
+      unstable.mpv.override {
         scripts = [ 
           mpvScripts.mpris
           mpvScripts.sponsorblock
