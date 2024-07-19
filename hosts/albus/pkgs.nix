@@ -8,7 +8,6 @@
       ../../services/rpiplay.nix
       ../../pkgs/virt.nix
       ../../pkgs/wine.nix
-      ../../pkgs/mpv.nix
     ];
 
     # services.hardware.openrgb.enable = true;
