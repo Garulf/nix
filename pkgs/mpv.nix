@@ -14,6 +14,7 @@
         ];
       }
     )
+    plex-mpv-shim
     open-in-mpv
   ];
 
