@@ -10,6 +10,7 @@
           mpvScripts.quality-menu
           mpvScripts.modernx
           mpvScripts.quality-menu
+          mpvScripts.youtube-upnext
         ];
       }
     )
