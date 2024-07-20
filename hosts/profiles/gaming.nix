@@ -17,6 +17,7 @@
      gzdoom
      lutris
      obs-studio
+     mangohud
   ];
 
   programs.gamemode.enable = true;
