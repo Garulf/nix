@@ -7,6 +7,7 @@
     5900 # VNC
     5901 # VNC
     3000
+    8080
   ];
   networking.firewall.allowedUDPPortRanges = [ 
     { from = 60000; to = 61000; } # Mosh
