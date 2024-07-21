@@ -29,6 +29,7 @@
      playerctl
      pulseaudio
      vlock
+     hacompanion
   ];
 
   services.rpiplay.enable = true;
