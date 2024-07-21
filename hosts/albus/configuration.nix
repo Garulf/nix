@@ -30,6 +30,7 @@
      pulseaudio
      vlock
      hacompanion
+     lua
   ];
 
   services.rpiplay.enable = true;
