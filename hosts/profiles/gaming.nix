@@ -18,10 +18,12 @@
      lutris
      obs-studio
      mangohud
+     heroic
+     protonup
   ];
 
   programs.gamemode.enable = true;
-
+  
   programs.gamescope = {
     enable = true;
     capSysNice = false;

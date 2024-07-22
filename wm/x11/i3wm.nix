@@ -12,10 +12,9 @@
     extraPackages = with pkgs; [
       dmenu
       # i3status
-      i3lock
+      i3lock-color
       xss-lock
       i3blocks
-      i3lock-fancy
       xborders
       xidlehook
       imagemagick
