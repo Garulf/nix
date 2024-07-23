@@ -24,6 +24,7 @@
     neovim
     killall
     unzip
+    sshfs
   ];
 
   fonts.packages = with pkgs; [
