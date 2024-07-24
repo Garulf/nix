@@ -81,6 +81,7 @@
       xwinwrap # A utility that allows you to use an animated X window as the wallpaper
       tree
       bc
+      yazi
     ];
   };
   
