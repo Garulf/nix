@@ -92,9 +92,6 @@
   programs.neovim = {
     enable = true;
     defaultEditor = true;
-    plugins = [
-      pkgs.vimPlugins.pyright
-    ];
   };
 
 }
