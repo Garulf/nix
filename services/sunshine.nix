@@ -17,7 +17,7 @@ with lib;
 
   services.sunshine = {
     package = (pkgs.unstable.sunshine.override { cudaSupport = true; });
-    enable = true;
+    enable = false;
     autoStart = true;
     capSysAdmin = true;
     openFirewall = true;
