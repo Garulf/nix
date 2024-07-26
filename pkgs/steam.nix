@@ -6,7 +6,7 @@
       package = pkgs.unstable.steam;
       remotePlay.openFirewall = true;
       dedicatedServer.openFirewall = true;
-      gamescopeSession.enable = true;
+      gamescopeSession.enable = false;
   };
   hardware.steam-hardware.enable = true;
 }
