@@ -39,6 +39,17 @@
           ./hosts/albus/configuration.nix
         ];
       };
+      Argentum = nixpkgs.lib.nixosSystem {
+        specialArgs = {inherit inputs outputs;};
+        # > Our main nixos configuration file <
+        modules = [
+          {
+            imports = [ aagl.nixosModules.default ];
+            nix.settings = aagl.nixConfig;
+          }
+          ./hosts/Argentum/configuration.nix
+        ];
+      };
     };
 
     # Standalone home-manager configuration entrypoint
