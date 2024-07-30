@@ -61,8 +61,6 @@
       pika-backup # Simple backups based on borg
       github-desktop # A GitHub Desktop client
       jqp # A command-line JSON processor
-      libimobiledevice # A library that talks the protocols to support iPhone, iPod Touch, iPad and Apple TV devices
-      ifuse # A tool for mounting Apple devices
       stow # A tool for managing the installation of multiple software packages in the same run-time directory tree
       xwinwrap # A utility that allows you to use an animated X window as the wallpaper
       tree

@@ -10,6 +10,7 @@
       ../common/base.nix
       ../../services/sunshine.nix
       ../profiles/gaming.nix
+      ../../wm/x11/i3wm.nix
     ];
   
   nixpkgs = {
