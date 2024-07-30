@@ -2,13 +2,9 @@
 
 {
   imports = [
-    ../wm/x11/gnome.nix
-    ../wm/x11/i3wm.nix
-    ../wm/wayland/hyprland.nix
     ../pkgs/neovim.nix
     # ../pkgs/discord.nix
   ];
-  services.displayManager.defaultSession = "none+i3";
 
   services.xserver.displayManager = {
     gdm = {

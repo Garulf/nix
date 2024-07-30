@@ -8,6 +8,10 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
+      ../../users/garulf.nix
+      ../../wm/x11/i3wm.nix
+      ../../wm/x11/gnome.nix
+      ../common/base.nix
       "${builtins.fetchGit { url = "https://github.com/NixOS/nixos-hardware.git"; }}/apple/t2"
     ];
 
@@ -79,18 +83,6 @@
   services.libinput.enable = true;
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users.garulf = {
-    isNormalUser = true;
-    extraGroups = [ "wheel" ]; # Enable ‘sudo’ for the user.
-    packages = with pkgs; [
-      firefox
-      tree
-      discord
-      rofi
-      git
-      kitty
-    ];
-  };
 
   users.users.ashley = {
     isNormalUser = true;
