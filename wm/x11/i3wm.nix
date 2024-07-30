@@ -20,6 +20,7 @@
       imagemagick
       i3altlayout
       i3-wk-switch
+      eww
     ];
   };
 
