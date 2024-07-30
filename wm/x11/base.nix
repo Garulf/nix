@@ -28,6 +28,11 @@
     };
   };
 
+  # Configure keymap in X11
+  services.xserver.xkb = {
+    layout = "us";
+    variant = "";
+  };
   # services.picom.enable = true;
   # systemd.user.services.picom.serviceConfig.ExecStart = ''
   #   ${pkgs.picom}/bin/picom --config /home/garulf/.config/picom/picom.conf
