@@ -6,16 +6,6 @@
     # ../pkgs/discord.nix
   ];
 
-  services.xserver.displayManager = {
-    gdm = {
-      enable = true;
-      wayland = true;
-    };
-    setupCommands = ''
-      bash -c "/home/garulf/.screenlayout/default.sh"
-    '';
-  };
-
 
   users.users.garulf = {
     isNormalUser = true;

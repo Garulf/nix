@@ -21,6 +21,7 @@
   ];
   
   services.xserver = {
+    enable = true;
     desktopManager.wallpaper = {
       combineScreens = true;
       mode = "fill";
