@@ -14,7 +14,6 @@
     shell = pkgs.zsh;
     packages = with pkgs; [
       entr
-      mpris-notifier
       helvum
       eww
       killall
