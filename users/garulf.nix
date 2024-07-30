@@ -65,6 +65,8 @@
       tree
       bc
       yazi
+      cmatrix
+      vlock
     ];
   };
   
