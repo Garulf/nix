@@ -55,8 +55,6 @@
   services.xserver.desktopManager.gnome.enable = true;
   services.xserver.windowManager.i3.enable = true;
 
-  programs.hyprland.enable = true;
-  programs.hyprland.xwayland.enable = true;
 
 
   
