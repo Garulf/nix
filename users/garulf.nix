@@ -9,7 +9,7 @@
 
   users.users.garulf = {
     isNormalUser = true;
-    description = "garulf";
+    description = "Garulf";
     extraGroups = [ "networkmanager" "wheel" "libvirtd" "i2c" "power" ];
     shell = pkgs.zsh;
     packages = with pkgs; [
