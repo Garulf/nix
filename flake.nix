@@ -47,7 +47,7 @@
             imports = [ aagl.nixosModules.default ];
             nix.settings = aagl.nixConfig;
           }
-          ./hosts/Argentum/configuration.nix
+          ./hosts/argentum/configuration.nix
         ];
       };
     };
