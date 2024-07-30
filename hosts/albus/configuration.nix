@@ -20,7 +20,6 @@
   };
 
   environment.systemPackages = with pkgs; [
-     cmatrix
      lm_sensors
      input-remapper
      cage
@@ -29,7 +28,6 @@
      streamdeck-ui
      playerctl
      pulseaudio
-     vlock
      hacompanion
      lua
   ];
