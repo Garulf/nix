@@ -84,10 +84,6 @@
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
 
-  users.users.ashley = {
-    isNormalUser = true;
-  };
-
   programs.neovim = {
     enable = true;
     defaultEditor = true;
