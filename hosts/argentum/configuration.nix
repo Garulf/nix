@@ -9,6 +9,7 @@
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
       ../../users/garulf.nix
+      ../../users/ashley.nix
       ../../wm/x11/i3wm.nix
       ../../wm/x11/gnome.nix
       ../common/base.nix
