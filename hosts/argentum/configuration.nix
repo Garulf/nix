@@ -13,6 +13,7 @@
       ../../wm/x11/i3wm.nix
       ../../wm/x11/gnome.nix
       ../common/base.nix
+      ../profiles/gaming.nix
       "${builtins.fetchGit { url = "https://github.com/NixOS/nixos-hardware.git"; }}/apple/t2"
     ];
 
