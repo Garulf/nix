@@ -14,6 +14,7 @@
       ../../wm/x11/gnome.nix
       ../common/base.nix
       ../profiles/gaming.nix
+      ../profiles/coding.nix
       "${builtins.fetchGit { url = "https://github.com/NixOS/nixos-hardware.git"; }}/apple/t2"
     ];
 
