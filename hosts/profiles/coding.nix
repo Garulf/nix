@@ -16,5 +16,6 @@
     vscode
     python3Full
     pipx
+    gnumake
   ];
 }
