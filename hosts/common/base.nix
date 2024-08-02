@@ -26,18 +26,24 @@
     unzip
     sshfs
   ];
-
-  fonts.packages = with pkgs; [
-    font-awesome
-    (nerdfonts.override { 
-      fonts = [ 
-        "FiraCode" 
-        "DroidSansMono" 
-        "Iosevka"
-        "JetBrainsMono"
-      ]; 
-    })
-  ];
+  fonts = {
+    defaultFonts = {
+        "serif" = "DejaVu Serif";
+        "sans-serif" = "DejaVu Sans";
+        "monospace" = "DejaVu Sans Mono";
+    };
+    packages = with pkgs; [
+      font-awesome
+      (nerdfonts.override {
+        fonts = [
+          "FiraCode"
+          "DroidSansMono"
+          "Iosevka"
+          "JetBrainsMono"
+        ];
+      })
+    ];
+  };
 
   security.polkit.enable = true;
 
@@ -76,5 +82,3 @@
     };
   };
 }
-
-
