@@ -1,4 +1,4 @@
-{ config, pkgs, ... }: 
+{ config, pkgs, ... }:
 
 {
   imports = [
@@ -69,7 +69,9 @@
       vlock
     ];
   };
-  
+
+  security.pam.services.garulf.enableGnomeKeyring = true;
+
   services.usbmuxd.enable = true;
 
   programs.zsh.enable = true;
