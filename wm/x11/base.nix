@@ -19,7 +19,7 @@
     xorg.xset
     xorg.xkill
   ];
-  
+
   services.xserver = {
     enable = true;
     desktopManager.wallpaper = {
@@ -27,6 +27,8 @@
       mode = "fill";
     };
   };
+
+  services.gnome.gnome-keyring.enable = true;
 
   # Configure keymap in X11
   services.xserver.xkb = {
@@ -37,5 +39,5 @@
   # systemd.user.services.picom.serviceConfig.ExecStart = ''
   #   ${pkgs.picom}/bin/picom --config /home/garulf/.config/picom/picom.conf
   # '';
-  
+
 }
