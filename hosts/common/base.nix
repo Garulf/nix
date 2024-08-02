@@ -27,10 +27,12 @@
     sshfs
   ];
   fonts = {
-    defaultFonts = {
-        serif = ["DejaVu Serif"];
-        sans-serif = ["DejaVu Sans"];
-        monospace = ["DejaVu Sans Mono"];
+    fontconfig = {
+      defaultFonts = {
+          serif = ["DejaVu Serif"];
+          sans-serif = ["DejaVu Sans"];
+          monospace = ["DejaVu Sans Mono"];
+      };
     };
     packages = with pkgs; [
       font-awesome
