@@ -48,7 +48,7 @@
       feh
       maim
       cifs-utils
-      rofi-wayland
+      rofi
       fzf
       xxh
       trash-cli
