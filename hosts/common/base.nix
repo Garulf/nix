@@ -30,7 +30,7 @@
     fontconfig = {
       defaultFonts = {
           serif = ["DejaVu Serif"];
-          sans-serif = ["DejaVu Sans"];
+          sansSerif = ["DejaVu Sans"];
           monospace = ["DejaVu Sans Mono"];
       };
     };
