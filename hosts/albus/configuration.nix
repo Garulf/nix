@@ -2,7 +2,7 @@
 
 {
   imports =
-    [ 
+    [
       ./hardware-configuration.nix
       ./pkgs.nix
       ../../users/garulf.nix
@@ -12,7 +12,7 @@
       ../profiles/gaming.nix
       ../../wm/x11/i3wm.nix
     ];
-  
+
   nixpkgs = {
     overlays = [
       outputs.overlays.unstable-packages
@@ -30,10 +30,11 @@
      pulseaudio
      hacompanion
      lua
+     liquidctl
   ];
 
   services.rpiplay.enable = true;
-  
+
 
   services.xserver.displayManager = {
     gdm = {
@@ -99,7 +100,7 @@
 
   # Enable CUPS to print documents.
   services.printing.enable = true;
-  
+
   # Enable bluetooth
   hardware.bluetooth.enable = true;
 
@@ -139,7 +140,7 @@
   virtualisation.waydroid.enable = true;
   virtualisation.docker.enable = true;
   services.flatpak.enable = false;
-  
+
   programs.mosh.enable = true;
 
   programs.honkers-railway-launcher.enable = true;
@@ -150,5 +151,5 @@
   # this value at the release version of the first install of this system.
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
-  system.stateVersion = "24.05"; # Did you read the comment? 
+  system.stateVersion = "24.05"; # Did you read the comment?
 }
