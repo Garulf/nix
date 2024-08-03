@@ -67,6 +67,7 @@
       yazi
       cmatrix
       vlock
+      plexamp
     ];
   };
 
