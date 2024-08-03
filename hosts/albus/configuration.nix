@@ -31,6 +31,7 @@
      hacompanion
      lua
      liquidctl
+     coolercontrol.coolercontrol-gui
   ];
 
   programs.coolercontrol.enable = true;
