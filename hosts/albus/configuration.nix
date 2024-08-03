@@ -31,6 +31,7 @@
      hacompanion
      lua
      liquidctl
+     coolercontrol.coolercontrol-liqctld
   ];
 
   services.rpiplay.enable = true;
