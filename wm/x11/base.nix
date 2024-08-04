@@ -18,7 +18,6 @@
     xorg.xrandr
     xorg.xset
     xorg.xkill
-    libadwaita
   ];
 
   services.xserver = {
