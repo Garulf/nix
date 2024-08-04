@@ -22,6 +22,7 @@
     (lutris.override {
       extraLibraries = pkgs: [
         libadwaita
+        gtk4
       ];
       extraPkgs = pkgs: [
         libadwaita
