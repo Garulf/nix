@@ -23,6 +23,7 @@
       extraLibraries = pkgs: [
         libadwaita
         gtk4
+        pango
       ];
       extraPkgs = pkgs: [
         libadwaita
