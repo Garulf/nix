@@ -2,11 +2,11 @@
 
 {
   imports =
-    [
+    [ 
       ../../pkgs/steam.nix
       ../../pkgs/prismlauncher.nix
     ];
-
+  
   nixpkgs = {
     overlays = [
       outputs.overlays.unstable-packages
@@ -20,15 +20,10 @@
      mangohud
      heroic
      protonup
-    (lutris.override {
-      extraLibraries = [
-        libadwaita
-      ];
-    })
   ];
 
   programs.gamemode.enable = true;
-
+  
   programs.gamescope = {
     enable = true;
     capSysNice = false;
