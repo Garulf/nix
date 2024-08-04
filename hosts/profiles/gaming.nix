@@ -24,6 +24,7 @@
         libadwaita
         gtk4
         pango
+        dxvk
       ];
     })
   ];
