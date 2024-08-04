@@ -21,7 +21,10 @@
      heroic
      protonup
     (lutris.override {
-      extraLibraries =  pkgs: [
+      extraLibraries = pkgs: [
+        libadwaita
+      ];
+      extraPkgs = pkgs: [
         libadwaita
       ];
     })
