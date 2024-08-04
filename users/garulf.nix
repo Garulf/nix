@@ -68,6 +68,7 @@
       cmatrix
       vlock
       plexamp
+      gimp-with-plugins
     ];
   };
 
