@@ -15,7 +15,6 @@
 
   environment.systemPackages = with pkgs; [
      gzdoom
-     lutris
      obs-studio
      mangohud
      heroic
