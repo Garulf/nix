@@ -25,9 +25,6 @@
         gtk4
         pango
       ];
-      extraPkgs = pkgs: [
-        libadwaita
-      ];
     })
   ];
 
