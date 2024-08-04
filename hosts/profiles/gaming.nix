@@ -24,9 +24,6 @@
         libadwaita
         gtk4
         pango
-        dxvk
-        vulkan-tools
-        vulkan-loader
       ];
     })
   ];
