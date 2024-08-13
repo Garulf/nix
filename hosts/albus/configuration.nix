@@ -12,7 +12,6 @@
       ../profiles/gaming.nix
       ../profiles/coding.nix
       ../../wm/x11/i3wm.nix
-      ../../wm/wayland/hyprland.nix
     ];
 
   nixpkgs = {
