@@ -12,6 +12,7 @@
       ../profiles/gaming.nix
       ../profiles/coding.nix
       ../../wm/x11/i3wm.nix
+      ../../wm/wayland/hyprland.nix
     ];
 
   nixpkgs = {
@@ -49,6 +50,7 @@
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
+  boot.kernelPackages = pkgs.unstable.linuxPackages_latest;
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
