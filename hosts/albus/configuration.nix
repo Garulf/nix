@@ -12,7 +12,6 @@
       ../profiles/gaming.nix
       ../profiles/coding.nix
       ../../wm/x11/i3wm.nix
-      ../../wm/x11/gnome.nix
     ];
 
   nixpkgs = {
