@@ -34,7 +34,6 @@
       screen
       tmux
       kitty
-      obsidian
       remmina
       synology-drive-client
       neofetch
