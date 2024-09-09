@@ -74,7 +74,7 @@
    };
 
   fileSystems."/mnt/Games" =
-    { device = "/dev/nvme1n1p1";
+    { device = "/dev/disk/by-uuid/86066675-7353-482e-b61a-bad06373831b";
       fsType = "ext4";
       options = ["nodev" "rw" "user" "exec" "nosuid" "nofail" "x-gvfs-show"];
       label = "Games";
