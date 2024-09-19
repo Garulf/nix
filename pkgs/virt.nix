@@ -7,6 +7,7 @@
     virt-viewer
     virt-manager
     virtiofsd
+    pciutils
   ];
 
   virtualisation.libvirtd = {
