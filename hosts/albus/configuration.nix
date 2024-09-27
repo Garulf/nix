@@ -13,6 +13,7 @@
       ../profiles/coding.nix
       ../../wm/x11/i3wm.nix
       ../../wm/x11/gnome.nix
+      ../../wm/wayland/hyprland.nix
     ];
 
   nixpkgs = {
