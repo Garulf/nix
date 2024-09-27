@@ -13,8 +13,16 @@
 
   # Fix issues with some applications not working with Nvidia
   # https://github.com/NixOS/nixpkgs/issues/32580
-  environment.variables.WEBKIT_DISABLE_COMPOSITING_MODE = "1";
+  environment.variables = {
+      WEBKIT_DISABLE_COMPOSITING_MODE = "1";
+      GBM_BACKEND = "nvidia-drm";
+      __GLX_VENDOR_LIBRARY_NAME = "nvidia";
+      WLR_NO_HARDWARE_CURSORS = "1";
+    };
 
+  boot = {
+      kernelParams = [ "nvidia-drm.fbdev=1" ];
+  };
 
   hardware.nvidia = {
 
