@@ -47,7 +47,6 @@
       feh
       maim
       cifs-utils
-      rofi
       fzf
       xxh
       trash-cli
