@@ -57,10 +57,5 @@
       settingsSha256 = "sha256-ZpuVZybW6CFN/gz9rx+UJvQ715FZnAOYfHn5jt5Z2C8=";
       persistencedSha256 = "sha256-a1D7ZZmcKFWfPjjH1REqPM5j/YLWKnbkP9qfRyIyxAw=";
     };
-
-    vaapi = {
-      enable = true;
-      firefox.enable = true;
-    };
   };
 }
