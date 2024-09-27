@@ -33,6 +33,6 @@
   programs.gamescope = {
     enable = true;
     capSysNice = false;
-    package = pkgs.unstable.gamescope;
+    package = pkgs.gamescope;
   };
 }
