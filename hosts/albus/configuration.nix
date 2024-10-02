@@ -50,7 +50,7 @@
   };
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
-  boot.kernelPackages = pkgs.unstable.linuxPackages_6_10;
+  boot.kernelPackages = pkgs.unstable.linuxPackages_6_9;
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
