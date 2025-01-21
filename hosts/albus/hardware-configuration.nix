@@ -73,13 +73,6 @@
      options = [ "fmask=0022" "dmask=0022" ];
    };
 
-  fileSystems."/mnt/Games" =
-    { device = "/dev/disk/by-uuid/86066675-7353-482e-b61a-bad06373831b";
-      fsType = "ext4";
-      options = ["nodev" "rw" "user" "exec" "nosuid" "nofail" "x-gvfs-show"];
-      label = "Games";
-    };
-
   fileSystems."/mnt/Storage" =
     { device = "/dev/md0";
       fsType = "ext4";
