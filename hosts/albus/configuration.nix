@@ -35,6 +35,7 @@
      lua
      liquidctl
      coolercontrol.coolercontrol-gui
+     inputs.nix-citizen.packages.${system}.star-citizen
   ];
 
   programs.coolercontrol.enable = true;

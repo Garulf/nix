@@ -12,6 +12,10 @@
 
     aagl.url = "github:ezKEa/aagl-gtk-on-nix/release-24.05";
     aagl.inputs.nixpkgs.follows = "nixpkgs";
+    nix-citizen.url = "github:LovingMelody/nix-citizen";
+    
+    nix-gaming.url = "github:fufexan/nix-gaming";
+    nix-citizen.inputs.nix-gaming.follows = "nix-gaming";
 
   };
 
