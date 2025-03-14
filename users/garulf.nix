@@ -24,7 +24,7 @@
       procps
       python3Full
       firefox
-      cider
+      cider-2
       qutebrowser
       bitwarden
       bitwarden-cli
