@@ -8,7 +8,6 @@
     5901 # VNC
     3000
     8080
-    11987 # CoolerControl
   ];
   networking.firewall.allowedUDPPortRanges = [ 
     { from = 60000; to = 61000; } # Mosh
