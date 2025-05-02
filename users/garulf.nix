@@ -25,6 +25,7 @@
       python3Full
       firefox
       cider
+      unstable.cider-2
       qutebrowser
       bitwarden
       bitwarden-cli

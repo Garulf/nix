@@ -80,6 +80,13 @@
       label = "Storage";
     };
 
+  fileSystems."/mnt/Games" =
+    { device = "/dev/disk/by-uuid/2BA3D74712516DFB";
+      fsType = "ntfs3";
+      options = ["rw" "nosuid" "nodev" "relatime" "uid=1000" "gid=100" "iocharset=utf8" "uhelper=udisks2"];
+      label = "Games";
+    };
+
   swapDevices = [
     {
       device = "/dev/disk/by-uuid/101adac7-4264-45fd-bb10-1afd2b3e0f32";
