@@ -12,6 +12,13 @@
   boot.loader.systemd-boot.configurationLimit = 3;
   boot.kernelParams = [ "ip=dhcp" ];
   boot.kernelModules = [ "kvm-amd" "amd_iommu=on" "vfio-pci" "igp" ];
+
+  # Recommended for Star Citizen
+  boot.kernel.sysctl = {
+    "vm.max_map_count" = 16777216;
+    "fs.file-max" = 524288;
+  };
+
   boot.initrd = {
     kernelModules = [ "dm-snapshot" ];
     availableKernelModules = [
