@@ -39,6 +39,7 @@
   ];
 
   programs.coolercontrol.enable = true;
+  programs.coolercontrol.nvidiaSupport = false;
 
   services.rpiplay.enable = true;
 
