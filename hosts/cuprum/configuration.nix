@@ -28,6 +28,14 @@ in {
     curl
   ];
 
+  homebrew = {
+    enable = true;
+    onActivation.autoUpdate = false;
+    # plex-media-server is a macOS-native binary; the nixpkgs package is Linux-only
+    # and cannot access VideoToolbox for hardware transcoding
+    casks = [ "plex-media-server" ];
+  };
+
   environment.variables = {
     TZ = tz;
     HOMESERVER_DATA = dataDir;
@@ -51,26 +59,6 @@ in {
       KeepAlive = true;
       StandardOutPath = "/tmp/colima.log";
       StandardErrorPath = "/tmp/colima.log";
-    };
-  };
-
-  # Plex Media Server — runs natively on macOS
-  launchd.user.agents.plexmediaserver = {
-    serviceConfig = {
-      Label = "tv.plex.plexmediaserver";
-      ProgramArguments = [
-        "${pkgs.plexmediaserver}/lib/plexmediaserver/Plex Media Server"
-      ];
-      EnvironmentVariables = {
-        PLEX_MEDIA_SERVER_HOME = "${pkgs.plexmediaserver}/lib/plexmediaserver";
-        PLEX_MEDIA_SERVER_APPLICATION_SUPPORT_DIR = "${dataDir}/plex";
-        PLEX_MEDIA_SERVER_MAX_PLUGIN_PROCS = "6";
-        HOME = "/Users/garulf";
-      };
-      RunAtLoad = true;
-      KeepAlive = true;
-      StandardOutPath = "/tmp/plexmediaserver.log";
-      StandardErrorPath = "/tmp/plexmediaserver.log";
     };
   };
 
