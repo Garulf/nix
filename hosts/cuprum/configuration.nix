@@ -21,19 +21,6 @@ let
     exec "$VENV/bin/hass" --config "$CONFIG"
   '';
 
-  # Mount Albus SMB shares for Plex — waits for the host to be reachable,
-  # then mounts. Credentials are read from macOS Keychain (add once with
-  # `open smb://garulf@albus.local` and tick "Remember in Keychain").
-  mount-smb = pkgs.writeShellScript "mount-smb-shares" ''
-    until /sbin/ping -c1 -t2 albus.local &>/dev/null 2>&1; do
-      sleep 10
-    done
-
-    /bin/mkdir -p /Volumes/Storage /Volumes/Media
-
-    /sbin/mount_smbfs //garulf@albus.local/public  /Volumes/Storage 2>/dev/null || true
-    /sbin/mount_smbfs //garulf@albus.local/private /Volumes/Media   2>/dev/null || true
-  '';
 in {
   nixpkgs = {
     config.allowUnfree = true;
@@ -104,18 +91,23 @@ in {
     };
   };
 
-  # SMB shares from Albus — mounted at boot for Plex media access
-  launchd.daemons.mount-smb = {
-    serviceConfig = {
-      Label = "local.mount-smb-shares";
-      ProgramArguments = [ "${mount-smb}" ];
-      RunAtLoad = true;
-      # Retry every 5 minutes in case the network drops
-      StartInterval = 300;
-      StandardOutPath = "/tmp/mount-smb.log";
-      StandardErrorPath = "/tmp/mount-smb.log";
-    };
-  };
+  # SMB shares from Albus via autofs — mounts on demand, unmounts when idle.
+  # Credentials stored in macOS Keychain (authenticate once via Finder).
+  environment.etc."auto_smb".text = ''
+    video  -fstype=smbfs,noowners,soft,nosuid,rw  ://garulf@10.0.0.2/video
+    music  -fstype=smbfs,noowners,soft,nosuid,rw  ://garulf@10.0.0.2/music
+  '';
+
+  # Preserve macOS defaults and append our map mountpoints
+  environment.etc."auto_master".text = ''
+    +auto_master
+    /net             -hosts          -nobrowse,hidefromfinder,nosuid
+    /home            auto_home       -nobrowse,hidefromfinder
+    /Network/Servers -fstab
+    /-               -static
+    /System/Volumes/Data/NAS  auto_smb
+    /System/Volumes/Data/mnt  auto_smb
+  '';
 
   # Apple Silicon detector for Frigate — exposes NPU over ZMQ on port 5555.
   # Install from: https://github.com/frigate-nvr/apple-silicon-detector/releases
