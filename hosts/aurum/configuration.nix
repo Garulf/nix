@@ -8,7 +8,7 @@
   nixpkgs = {
     overlays = [ outputs.overlays.unstable-packages ];
     config.allowUnfree = true;
-    hostPlatform = lib.mkDefault "aarch64-darwin";
+    hostPlatform = lib.mkDefault "x86_64-darwin";
   };
 
   nix.settings = {
