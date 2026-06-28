@@ -17,6 +17,9 @@
     nix-gaming.url = "github:fufexan/nix-gaming";
     nix-citizen.inputs.nix-gaming.follows = "nix-gaming";
 
+    nix-darwin.url = "github:lnl7/nix-darwin";
+    nix-darwin.inputs.nixpkgs.follows = "nixpkgs";
+
   };
 
   outputs = {
@@ -24,6 +27,7 @@
     nixpkgs,
     home-manager,
     aagl,
+    nix-darwin,
     ...
   } @ inputs: let
     inherit (self) outputs;
@@ -53,6 +57,13 @@
           }
           ./hosts/argentum/configuration.nix
         ];
+      };
+    };
+
+    darwinConfigurations = {
+      Aurum = nix-darwin.lib.darwinSystem {
+        specialArgs = {inherit inputs outputs;};
+        modules = [ ./hosts/aurum/configuration.nix ];
       };
     };
 

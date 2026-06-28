@@ -3,19 +3,39 @@ default:
 
 # Build and activate config, set as boot default
 switch:
-    nh os switch .
+    #!/usr/bin/env bash
+    if [[ "$(uname)" == "Darwin" ]]; then
+        nh darwin switch .
+    else
+        nh os switch .
+    fi
 
 # Build and set as boot default without activating (takes effect on next reboot)
 boot:
-    nh os boot .
+    #!/usr/bin/env bash
+    if [[ "$(uname)" == "Darwin" ]]; then
+        nh darwin build .
+    else
+        nh os boot .
+    fi
 
 # Build and activate config without setting as boot default
 test:
-    nh os test .
+    #!/usr/bin/env bash
+    if [[ "$(uname)" == "Darwin" ]]; then
+        nh darwin switch . --dry
+    else
+        nh os test .
+    fi
 
 # Build without activating (useful for checking for errors)
 build:
-    nh os build .
+    #!/usr/bin/env bash
+    if [[ "$(uname)" == "Darwin" ]]; then
+        nh darwin build .
+    else
+        nh os build .
+    fi
 
 # Update all flake inputs
 update:
