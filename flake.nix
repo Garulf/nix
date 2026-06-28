@@ -65,6 +65,10 @@
         specialArgs = {inherit inputs outputs;};
         modules = [ ./hosts/aurum/configuration.nix ];
       };
+      Cuprum = nix-darwin.lib.darwinSystem {
+        specialArgs = {inherit inputs outputs;};
+        modules = [ ./hosts/cuprum/configuration.nix ];
+      };
     };
 
     # Standalone home-manager configuration entrypoint

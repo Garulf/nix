@@ -1,0 +1,46 @@
+name: homeserver
+
+# Data lives at $HOMESERVER_DATA (/opt/homeserver by default)
+# Run: docker compose up -d
+
+services:
+
+  home-assistant:
+    image: ghcr.io/home-assistant/home-assistant:stable
+    container_name: home-assistant
+    restart: unless-stopped
+    ports:
+      - "8123:8123"
+    volumes:
+      - ${HOMESERVER_DATA}/home-assistant:/config
+    environment:
+      - TZ=${TZ:-America/New_York}
+
+  frigate:
+    image: ghcr.io/blakeblackshear/frigate:stable
+    container_name: frigate
+    restart: unless-stopped
+    platform: linux/arm64
+    ports:
+      - "5000:5000"    # Web UI
+      - "8554:8554"    # RTSP feeds
+      - "8555:8555"    # WebRTC
+    volumes:
+      - ${HOMESERVER_DATA}/frigate/config:/config
+      - ${HOMESERVER_DATA}/frigate/media:/media/frigate
+    environment:
+      - TZ=${TZ:-America/New_York}
+    shm_size: "256mb"   # increase if running multiple cameras
+
+  scrypted:
+    image: ghcr.io/koush/scrypted:latest
+    container_name: scrypted
+    restart: unless-stopped
+    platform: linux/arm64
+    ports:
+      - "11080:11080"   # Web UI (http)
+      - "10443:10443"   # Web UI (https)
+    volumes:
+      - ${HOMESERVER_DATA}/scrypted:/server/volume
+    environment:
+      - TZ=${TZ:-America/New_York}
