@@ -74,6 +74,22 @@ in {
     };
   };
 
+  # Apple Silicon detector for Frigate — exposes NPU over ZMQ on port 5555.
+  # The app bundle must be installed first:
+  # https://github.com/frigate-nvr/apple-silicon-detector/releases
+  launchd.user.agents.frigate-detector = {
+    serviceConfig = {
+      Label = "nvr.frigate.apple-silicon-detector";
+      ProgramArguments = [
+        "/Applications/FrigateDetector.app/Contents/MacOS/FrigateDetector"
+      ];
+      RunAtLoad = true;
+      KeepAlive = true;
+      StandardOutPath = "/tmp/frigate-detector.log";
+      StandardErrorPath = "/tmp/frigate-detector.log";
+    };
+  };
+
   users.users.garulf = {
     home = "/Users/garulf";
     shell = pkgs.zsh;

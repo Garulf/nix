@@ -17,10 +17,10 @@ services:
       - TZ=${TZ:-America/New_York}
 
   frigate:
-    image: ghcr.io/blakeblackshear/frigate:stable
+    # standard-arm64 image required for Apple Silicon detector support
+    image: ghcr.io/blakeblackshear/frigate:stable-standard-arm64
     container_name: frigate
     restart: unless-stopped
-    platform: linux/arm64
     ports:
       - "5000:5000"    # Web UI
       - "8554:8554"    # RTSP feeds

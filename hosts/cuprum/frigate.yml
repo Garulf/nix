@@ -1,0 +1,26 @@
+# Frigate config — copy to /opt/homeserver/frigate/config/config.yml
+#
+# Apple Silicon detector: the NPU cannot be accessed from inside a container.
+# FrigateDetector.app must be running on the host (managed by launchd).
+# Download from: https://github.com/frigate-nvr/apple-silicon-detector/releases
+
+mqtt:
+  enabled: false  # set to true if you use MQTT with Home Assistant
+
+detectors:
+  apple-silicon:
+    type: zmq
+    endpoint: tcp://host.docker.internal:5555
+
+cameras: {}
+  # example-camera:
+  #   ffmpeg:
+  #     inputs:
+  #       - path: rtsp://user:pass@192.168.1.x:554/stream
+  #         roles:
+  #           - detect
+  #           - record
+  #   detect:
+  #     width: 1920
+  #     height: 1080
+  #     fps: 5
