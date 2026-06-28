@@ -10,8 +10,8 @@
       ../common/nvidia.nix
     ];
   boot.loader.systemd-boot.configurationLimit = 3;
-  boot.kernelParams = [ "ip=dhcp" ];
-  boot.kernelModules = [ "kvm-amd" "amd_iommu=on" "vfio-pci" "igp" ];
+  boot.kernelParams = [ "ip=dhcp" "amd_iommu=on" ];
+  boot.kernelModules = [ "kvm-amd" "vfio-pci" "igp" ];
 
   # Recommended for Star Citizen
   boot.kernel.sysctl = {

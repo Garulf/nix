@@ -7,12 +7,6 @@
       ../../pkgs/prismlauncher.nix
     ];
 
-  nixpkgs = {
-    overlays = [
-      outputs.overlays.unstable-packages
-    ];
-  };
-
   environment.systemPackages = with pkgs; [
      gzdoom
      obs-studio

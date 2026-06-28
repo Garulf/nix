@@ -25,6 +25,8 @@
     killall
     unzip
     sshfs
+    nh
+    just
   ];
   fonts = {
     fontconfig = {

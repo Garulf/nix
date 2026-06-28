@@ -35,7 +35,7 @@
      lua
      liquidctl
      coolercontrol.coolercontrol-gui
-     inputs.nix-citizen.packages.${system}.star-citizen
+     inputs.nix-citizen.packages.${pkgs.system}.star-citizen
   ];
 
   programs.coolercontrol.enable = true;
@@ -113,7 +113,6 @@
   hardware.bluetooth.enable = true;
 
   # Enable sound with pipewire.
-  sound.enable = true;
   hardware.pulseaudio.enable = false;
   security.rtkit.enable = true;
   services.pipewire = {
