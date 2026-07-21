@@ -38,14 +38,12 @@
     };
     packages = with pkgs; [
       font-awesome
-      (nerdfonts.override {
-        fonts = [
-          "FiraCode"
-          "DroidSansMono"
-          "Iosevka"
-          "JetBrainsMono"
-        ];
-      })
+      # 25.05: `nerdfonts` was split into per-font `nerd-fonts.*` packages
+      # (the old `nerdfonts.override { fonts = [...]; }` API was removed).
+      nerd-fonts.fira-code
+      nerd-fonts.droid-sans-mono
+      nerd-fonts.iosevka
+      nerd-fonts.jetbrains-mono
     ];
   };
 

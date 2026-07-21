@@ -2,13 +2,13 @@
 
 {
   environment.systemPackages = with pkgs; [
-    gnome.gnome-screenshot
+    gnome-screenshot
     dex
     feh
     dunst
     picom
-    gnome.adwaita-icon-theme
-    gnome.gnome-themes-extra
+    adwaita-icon-theme
+    gnome-themes-extra
     arandr
     xclip
     xcolor

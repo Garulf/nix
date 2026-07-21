@@ -17,9 +17,9 @@
     dunst
     libnotify
     swww
-    gnome.gnome-keyring
-    gnome.gnome-control-center
-    gnome.gnome-bluetooth
+    gnome-keyring
+    gnome-control-center
+    gnome-bluetooth
     blueberry
     brightnessctl
     playerctl

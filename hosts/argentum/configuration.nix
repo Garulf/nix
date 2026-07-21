@@ -77,7 +77,7 @@
 
   # Enable sound.
   # sound.enable = true;
-  hardware.pulseaudio.enable = false;
+  services.pulseaudio.enable = false; # 25.05: renamed from hardware.pulseaudio
   # OR
   services.pipewire = {
     enable = true;
@@ -126,7 +126,7 @@
   nixpkgs.config.packageOverrides = pkgs: {
       intel-vaapi-driver = pkgs.intel-vaapi-driver.override { enableHybridCodec = true; };
     };
-  hardware.opengl = { # hardware.graphics on unstable
+  hardware.graphics = { # 25.05: renamed from hardware.opengl
     enable = true;
     extraPackages = with pkgs; [
       intel-media-driver # LIBVA_DRIVER_NAME=iHD

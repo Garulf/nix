@@ -27,7 +27,7 @@
      input-remapper
      cage
      weston
-     gnome.nautilus
+     nautilus
      streamdeck-ui
      playerctl
      pulseaudio
@@ -113,7 +113,7 @@
   hardware.bluetooth.enable = true;
 
   # Enable sound with pipewire.
-  hardware.pulseaudio.enable = false;
+  services.pulseaudio.enable = false; # 25.05: renamed from hardware.pulseaudio
   security.rtkit.enable = true;
   services.pipewire = {
     enable = true;
@@ -139,9 +139,9 @@
   #   enableSSHSupport = true;
   # };
 
-  hardware.opengl = {
+  hardware.graphics = { # 25.05: was hardware.opengl / driSupport32Bit
     enable = true;
-    driSupport32Bit = true;
+    enable32Bit = true;
   };
 
   virtualisation.waydroid.enable = true;

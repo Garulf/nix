@@ -1,11 +1,11 @@
 { config, lib, pkgs, ... }:
 {
 
-  # Enable OpenGL
-  hardware.opengl = {
+  # Enable OpenGL (25.05: hardware.opengl -> hardware.graphics; driSupport is
+  # now always-on and was removed, driSupport32Bit -> enable32Bit).
+  hardware.graphics = {
     enable = true;
-    driSupport = true;
-    driSupport32Bit = true;
+    enable32Bit = true;
   };
 
   # Load nvidia driver for Xorg and Wayland
