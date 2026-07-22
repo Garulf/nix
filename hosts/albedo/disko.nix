@@ -144,6 +144,8 @@
           xattr = "sa";
           acltype = "posixacl";
           mountpoint = "none";
+          # Default: no auto-snapshots. Datasets opt IN individually (Documents does).
+          "com.sun:auto-snapshot" = "false";
           # Native encryption. The 32-byte raw key must exist at this path during
           # `zpool create` (installer) and on the installed root at boot.
           encryption = "aes-256-gcm";
@@ -154,6 +156,18 @@
           data = {
             type = "zfs_fs";
             mountpoint = "/mnt/tank";
+          };
+          # Bulk home dirs relocated off the single NVMe onto the redundant mirror.
+          # Standard ~/Documents and ~/Downloads paths, so XDG defaults still apply.
+          documents = {
+            type = "zfs_fs";
+            mountpoint = "/home/garulf/Documents";
+            options."com.sun:auto-snapshot" = "true"; # keep history (redundant + snapshotted)
+          };
+          downloads = {
+            type = "zfs_fs";
+            mountpoint = "/home/garulf/Downloads";
+            # inherits com.sun:auto-snapshot=false from the pool root (throwaway files)
           };
         };
       };

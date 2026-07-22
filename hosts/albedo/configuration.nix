@@ -41,6 +41,16 @@
   boot.zfs.requestEncryptionCredentials = false;
   services.zfs.autoScrub.enable = true;
   services.zfs.trim.enable = false; # spinning disks
+  # Snapshots for datasets with com.sun:auto-snapshot=true (only tank/documents).
+  # Defaults keep frequent/hourly/daily/weekly/monthly; Downloads is excluded.
+  services.zfs.autoSnapshot.enable = true;
+
+  # tank/documents and tank/downloads mount over ~/Documents / ~/Downloads, but
+  # ZFS mounts them root-owned. Reassert garulf ownership after they mount.
+  systemd.tmpfiles.rules = [
+    "d /home/garulf/Documents 0755 garulf users -"
+    "d /home/garulf/Downloads 0755 garulf users -"
+  ];
 
   # After the encrypted root is up, load tank's key (kept on the encrypted root)
   # and let zfs-mount mount it. One boot-time unlock (USB/passphrase) covers this.
