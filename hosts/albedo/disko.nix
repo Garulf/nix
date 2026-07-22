@@ -21,6 +21,13 @@
       # ---- NVMe #2: NixOS system disk ----
       nixos = {
         type = "disk";
+        # Samsung 970 EVO Plus 1TB. TWO identical NVMes are installed:
+        #   disk 2, Windows serial ...5EC7 = CURRENT Windows install (C:)
+        #   disk 3, Windows serial ...2669 = data drive (F:)
+        # Point this at whichever NVMe will be NixOS (it WILL be wiped). The Linux
+        # by-id is `nvme-Samsung_SSD_970_EVO_Plus_1TB_<controller-SN>` where the SN
+        # is NOT the Windows-reported serial above -> read it in the installer with
+        # `ls -l /dev/disk/by-id`. Do NOT target the disk that holds Windows.
         device = "/dev/disk/by-id/nvme-REPLACE_ME_nixos";
         content = {
           type = "gpt";
@@ -64,7 +71,9 @@
       # ---- 2x 4TB HDD: ZFS mirror members ----
       hdd0 = {
         type = "disk";
-        device = "/dev/disk/by-id/ata-REPLACE_ME_hdd0";
+        # Seagate IronWolf 4TB (Windows disk 0 / D:). ata- name = model_serial;
+        # verify with `ls -l /dev/disk/by-id` in the installer.
+        device = "/dev/disk/by-id/ata-ST4000VN008-2DR166_ZGY1Q16E";
         content = {
           type = "gpt";
           partitions.zfs = {
@@ -78,7 +87,8 @@
       };
       hdd1 = {
         type = "disk";
-        device = "/dev/disk/by-id/ata-REPLACE_ME_hdd1";
+        # Seagate IronWolf Pro 4TB (Windows disk 1 / E:). Verify in the installer.
+        device = "/dev/disk/by-id/ata-ST4000NE0025-2EW107_ZC19ABCC";
         content = {
           type = "gpt";
           partitions.zfs = {
